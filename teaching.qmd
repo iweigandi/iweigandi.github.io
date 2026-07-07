@@ -1,0 +1,133 @@
+---
+pagetitle: "Teaching"
+page-layout: full
+---
+::: {.lang-en}
+::: {.grid}
+::: {.g-col-12 .g-col-lg-9}
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2023 — 2025
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">University of Leeds, UK</div>
+<div class="teaching-role">Teaching Assistant</div>
+<ul class="teaching-list">
+  <li><strong>Intermediate Macroeconomics</strong> (2025)</li>
+  <li><strong>Economic Theory and Applications for Finance</strong> (2025)</li>
+  <li><strong>Economic Perspectives & Controversies</strong> (2023–2024)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2021
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Universidad Argentina de la Empresa (UADE), Argentina</div>
+<div class="teaching-role">Teaching Assistant</div>
+<ul class="teaching-list">
+  <li><strong>Risk Management</strong> (2021)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2017 — 2020
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Fundación de Altos Estudios en Ciencias Comerciales, Argentina</div>
+<div class="teaching-role">Module Leader & Teaching Assistant</div>
+<ul class="teaching-list">
+  <li><strong>Financial Engineering</strong> (Module Leader, 2019–2020)</li>
+  <li><strong>Introduction to Financial Markets</strong> (Teaching Assistant, 2017–2018)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2014 — 2017
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Universidad de Buenos Aires, Argentina</div>
+<div class="teaching-role">Teaching Assistant</div>
+<ul class="teaching-list">
+  <li><strong>World Economic and Social History</strong> (2014–2017)</li>
+</ul>
+:::
+:::
+::: 
+::: {.g-col-12 .g-col-lg-3}
+<div class="sidebar-note">
+  <strong>Thesis supervision</strong>
+  
+  I have experience supervising postgraduate research students.
+</div>
+:::
+:::
+:::
+
+::: {.lang-es}
+::: {.grid}
+::: {.g-col-12 .g-col-lg-9}
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2023 — 2025
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Universidad de Leeds, Reino Unido</div>
+<div class="teaching-role">Asistente de Docencia</div>
+<ul class="teaching-list">
+  <li><strong>Macroeconomía Intermedia</strong> (2025)</li>
+  <li><strong>Teoría Económica y Aplicaciones para Finanzas</strong> (2025)</li>
+  <li><strong>Perspectivas y Controversias Económicas</strong> (2023–2024)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2021
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Universidad Argentina de la Empresa (UADE), Argentina</div>
+<div class="teaching-role">Ayudante de Cátedra</div>
+<ul class="teaching-list">
+  <li><strong>Administración de Riesgos</strong> (2021)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2017 — 2020
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Fundación de Altos Estudios en Ciencias Comerciales, Argentina</div>
+<div class="teaching-role">Profesor a cargo y Ayudante de Cátedra</div>
+<ul class="teaching-list">
+  <li><strong>Ingeniería Financiera</strong> (Profesor a cargo, 2019–2020)</li>
+  <li><strong>Introducción a los Mercados Financieros</strong> (Ayudante de Cátedra, 2017–2018)</li>
+</ul>
+:::
+:::
+::: {.grid .teaching-block}
+::: {.g-col-12 .g-col-md-3 .teaching-date}
+2014 — 2017
+:::
+::: {.g-col-12 .g-col-md-9}
+<div class="teaching-uni">Universidad de Buenos Aires, Argentina</div>
+<div class="teaching-role">Ayudante de Cátedra</div>
+<ul class="teaching-list">
+  <li><strong>Historia Económica y Social General</strong> (2014–2017)</li>
+</ul>
+:::
+:::
+::: 
+::: {.g-col-12 .g-col-lg-3}
+<div class="sidebar-note">
+  <strong>Supervisión de Tesis</strong>
+  
+  Tengo experiencia supervisando a estudiantes de posgrado en sus investigaciones.
+</div>
+:::
+:::
+:::

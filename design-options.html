@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website visual options</title>
+  <style>
+    :root {
+      --ink: #1d252c;
+      --paper: #f4f1ea;
+      --blue-deep: #00466f;
+      --blue: #3297db;
+      --orange: #f38c10;
+      --line: rgba(0, 70, 111, 0.16);
+      --bg: url("images/home-background-navbar-blue.png");
+      font-family: "Segoe UI", "Aptos", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e9ecec;
+      color: var(--ink);
+      font-family: inherit;
+    }
+
+    .board {
+      display: grid;
+      gap: 28px;
+      padding: 28px;
+    }
+
+    .option {
+      min-height: 720px;
+      overflow: hidden;
+      border: 1px solid rgba(29, 37, 44, 0.16);
+      background: var(--paper);
+      box-shadow: 0 18px 42px rgba(29, 37, 44, 0.14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      height: 66px;
+      padding: 0 30px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .nav .brand { margin-right: 4px; }
+    .nav .socials { margin-left: auto; letter-spacing: 14px; }
+    .active { border-bottom: 3px solid var(--orange); padding-bottom: 10px; }
+
+    .content {
+      width: min(1180px, 84vw);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--blue-deep);
+      font-size: 54px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .accent {
+      width: 220px;
+      height: 4px;
+      margin-top: 16px;
+      background: linear-gradient(90deg, var(--blue-deep), var(--blue), var(--orange));
+    }
+
+    .tabs {
+      display: flex;
+      gap: 38px;
+      margin: 34px 0 18px;
+      border-bottom: 1px solid var(--line);
+      color: #53616a;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .tabs span {
+      padding-bottom: 14px;
+    }
+
+    .tabs span:first-child {
+      color: var(--blue-deep);
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .paper {
+      display: grid;
+      grid-template-columns: 38% 1fr;
+      gap: 54px;
+      align-items: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .figure {
+      height: 230px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      color: #111;
+      font-size: 13px;
+      box-shadow: 0 10px 26px rgba(29, 37, 44, 0.06);
+    }
+
+    .figure::before {
+      content: "Research figure";
+    }
+
+    .paper h2 {
+      margin: 0 0 8px;
+      font-size: 23px;
+      line-height: 1.15;
+      font-weight: 560;
+    }
+
+    .paper .meta {
+      margin-bottom: 18px;
+      color: #4d5961;
+      font-size: 16px;
+    }
+
+    .paper p {
+      margin: 0;
+      color: #303941;
+      font-size: 16px;
+      line-height: 1.52;
+    }
+
+    .option-label {
+      position: absolute;
+      right: 24px;
+      bottom: 18px;
+      color: rgba(29, 37, 44, 0.55);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .option-a {
+      position: relative;
+      background:
+        linear-gradient(rgba(244, 241, 234, 0.16), rgba(244, 241, 234, 0.16)),
+        var(--bg) center top / cover no-repeat;
+    }
+
+    .option-a .nav {
+      color: #fff;
+    }
+
+    .option-a .nav .socials {
+      color: var(--ink);
+    }
+
+    .option-a .content {
+      margin-top: 72px;
+      margin-left: max(156px, 10vw);
+    }
+
+    .option-a .paper {
+      width: min(930px, 72vw);
+      margin-left: 300px;
+    }
+
+    .option-b {
+      position: relative;
+      background:
+        linear-gradient(rgba(244, 241, 234, 0.04), rgba(244, 241, 234, 0.04)),
+        var(--bg) center top / cover no-repeat;
+    }
+
+    .option-b .nav {
+      color: #fff;
+    }
+
+    .option-b .nav .socials {
+      color: var(--ink);
+    }
+
+    .option-b .content {
+      width: min(1040px, 76vw);
+      margin-top: 96px;
+      margin-left: max(360px, 25vw);
+    }
+
+    .option-b h1,
+    .option-b .tabs,
+    .option-b .paper {
+      background: rgba(244, 241, 234, 0.82);
+      backdrop-filter: blur(1px);
+    }
+
+    .option-b .paper {
+      padding: 28px 0 0;
+    }
+
+    .option-c {
+      position: relative;
+      background:
+        linear-gradient(rgba(244, 241, 234, 0.72), rgba(244, 241, 234, 0.76)),
+        var(--bg) center top / cover no-repeat fixed;
+    }
+
+    .option-c .nav {
+      color: #fff;
+    }
+
+    .option-c .nav .socials {
+      color: var(--ink);
+    }
+
+    .option-c .content {
+      margin-top: 70px;
+    }
+
+    .option-c .content,
+    .option-c .paper {
+      width: min(1180px, 82vw);
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <section class="option option-a">
+      <nav class="nav">
+        <span class="brand">Iván Weigandi</span>
+        <span class="active">Research</span>
+        <span>Teaching</span>
+        <span>Blog</span>
+        <span>Open Data International Finance</span>
+        <span>CV</span>
+        <span class="socials">● ● ●</span>
+      </nav>
+      <div class="content">
+        <h1>Research</h1>
+        <div class="accent"></div>
+        <div class="tabs"><span>Publications</span><span>Working Papers</span><span>Policy & Other</span></div>
+        <article class="paper">
+          <div class="figure"></div>
+          <div>
+            <h2>Global Money and the Balance of Payments: How Do Global Banks Drive the Cross-Country US Dollar Credit Conditions?</h2>
+            <div class="meta">Review of Keynesian Economics, Volume 14, Issue 2. April 2026</div>
+            <p>The US dollar is the most widely used cross-border means of payment. Countries require access to these US dollars to pay for most of their balance of payments-related transactions, and restricted access to them can constrain growth possibilities.</p>
+          </div>
+        </article>
+      </div>
+      <div class="option-label">Option A</div>
+    </section>
+
+    <section class="option option-b">
+      <nav class="nav">
+        <span class="brand">Iván Weigandi</span>
+        <span class="active">Research</span>
+        <span>Teaching</span>
+        <span>Blog</span>
+        <span>Open Data International Macro-Finance</span>
+        <span>CV</span>
+        <span class="socials">● ● ●</span>
+      </nav>
+      <div class="content">
+        <h1>Research</h1>
+        <div class="accent"></div>
+        <div class="tabs"><span>Publications</span><span>Working Papers</span><span>Policy & Other</span></div>
+        <article class="paper">
+          <div class="figure"></div>
+          <div>
+            <h2>Global Money and the Balance of Payments: How Do Global Banks Drive the Cross-Country US Dollar Credit Conditions?</h2>
+            <div class="meta">Review of Keynesian Economics, Volume 14, Issue 2. April 2026</div>
+            <p>The US dollar is the most widely used cross-border means of payment. Countries require access to these US dollars to pay for most of their balance of payments-related transactions, and restricted access to them can constrain growth possibilities.</p>
+          </div>
+        </article>
+      </div>
+      <div class="option-label">Option B</div>
+    </section>
+
+    <section class="option option-c">
+      <nav class="nav">
+        <span class="brand">Iván Weigandi</span>
+        <span class="active">Research</span>
+        <span>Teaching</span>
+        <span>Blog</span>
+        <span>Open Data International Macro-Finance</span>
+        <span>CV</span>
+        <span class="socials">● ● ●</span>
+      </nav>
+      <div class="content">
+        <h1>Research</h1>
+        <div class="accent"></div>
+        <div class="tabs"><span>Publications</span><span>Working Papers</span><span>Policy & Other</span></div>
+        <article class="paper">
+          <div class="figure"></div>
+          <div>
+            <h2>Global Money and the Balance of Payments: How Do Global Banks Drive the Cross-Country US Dollar Credit Conditions?</h2>
+            <div class="meta">Review of Keynesian Economics, Volume 14, Issue 2. April 2026</div>
+            <p>The US dollar is the most widely used cross-border means of payment. Countries require access to these US dollars to pay for most of their balance of payments-related transactions, and restricted access to them can constrain growth possibilities.</p>
+          </div>
+        </article>
+      </div>
+      <div class="option-label">Option C</div>
+    </section>
+  </main>
+</body>
+</html>

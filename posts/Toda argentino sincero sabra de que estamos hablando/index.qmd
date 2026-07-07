@@ -1,0 +1,19 @@
+---
+title: "Toda argentino sincero sabra de que estamos hablando"
+author: "Iván Weigandi"
+date: "2026-11-01"
+categories: [Argentina, exchange rates]
+image: "image.jpg"
+---
+
+Bla bla bla
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(10)
+y = x**2
+
+plt.plot(x, y)
+plt.show()
+```

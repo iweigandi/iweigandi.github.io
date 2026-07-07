@@ -1,0 +1,991 @@
+:root {
+  --bg: #f4f1ea;
+  --text: #24313a;
+  --muted: #5f6d75;
+  --blue: #037e73;
+  --link: #00466f;
+  --orange: #037e73;
+  --rule: rgba(3, 126, 115, 0.18);
+  --surface: rgba(255, 255, 255, 0.34);
+  --width: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+body,
+p,
+li,
+td,
+th,
+.listing-description,
+.description {
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+img,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+.navbar {
+  background: var(--bg) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  min-height: 56px;
+}
+
+.navbar .navbar-container,
+.navbar > .container,
+.navbar > .container-fluid {
+  max-width: var(--width);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem) !important;
+}
+
+.navbar-title {
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .navbar-nav.ms-auto .nav-link {
+  color: var(--text) !important;
+  font-weight: 400;
+  border: 0 !important;
+  text-shadow: none !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--blue) !important;
+}
+
+.navbar-nav .nav-link.active {
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.32rem;
+}
+
+.navbar-toggler {
+  background: transparent !important;
+  border: 1px solid rgba(36, 49, 58, 0.38) !important;
+  border-radius: 3px !important;
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  background: var(--bg) !important;
+  border-top: 1px solid var(--rule);
+  box-shadow: none !important;
+}
+
+body:not(:has(.home-hero)) header.quarto-title-block,
+body:not(:has(.home-hero)) main.content,
+body:not(:has(.home-hero)) .page-columns,
+body:not(:has(.home-hero)) .quarto-page-content {
+  width: 100%;
+  max-width: var(--width) !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(1rem, 3vw, 2rem) !important;
+  background: transparent !important;
+}
+
+body:not(:has(.home-hero)) header.quarto-title-block {
+  padding-top: clamp(1.25rem, 3vw, 2rem) !important;
+  padding-bottom: clamp(0.8rem, 2vw, 1.25rem) !important;
+}
+
+body:not(:has(.home-hero)) main.content {
+  padding-top: 0 !important;
+  padding-bottom: clamp(3rem, 7vw, 5rem) !important;
+}
+
+.quarto-title h1,
+h1.title {
+  margin: 0 !important;
+  color: var(--text) !important;
+  font-size: 2.05rem !important;
+  line-height: 1.12 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+
+header.quarto-title-block::after,
+.quarto-title-meta {
+  display: none !important;
+}
+
+main h2,
+main h3 {
+  color: var(--blue);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.home-hero {
+  width: 100%;
+  max-width: var(--width);
+  min-height: calc(100svh - 56px);
+  margin: 0 auto;
+  padding: clamp(2rem, 6vh, 4.6rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 5vh, 3.6rem);
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.25fr);
+  gap: clamp(2.25rem, 6vw, 5.25rem);
+  align-items: stretch;
+}
+
+.home-photo-panel {
+  height: min(560px, calc(100svh - 7rem));
+  min-height: 320px;
+  display: grid;
+  place-items: center end;
+  align-self: start;
+  padding: 0;
+}
+
+.home-photo-panel p {
+  width: clamp(250px, 25vw, 380px);
+  max-width: 100%;
+  margin: 0;
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 18px 42px rgba(36, 49, 58, 0.16);
+  cursor: pointer;
+}
+
+.home-photo,
+.home-photo-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 49, 58, 0.45);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.photo-wrapper:hover .home-photo {
+  filter: blur(6px) brightness(0.9);
+  transform: scale(1.05);
+}
+
+.photo-wrapper:hover .photo-overlay {
+  opacity: 1;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 720px;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+.home-content p {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  line-height: 1.48;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.home-content h2 {
+  margin: 1rem 0 0.35rem;
+  color: var(--blue);
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.home-content h2 + p,
+.home-content h2 ~ p {
+  margin-bottom: 0.25rem;
+  font-size: 0.82rem;
+  line-height: 1.32;
+  text-align: left;
+}
+
+.panel-tabset .nav-tabs,
+.nav-tabs {
+  border-bottom: 1px solid var(--rule) !important;
+  margin-bottom: 1.3rem;
+}
+
+.nav-tabs .nav-link {
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  font-weight: 400;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+  color: var(--blue) !important;
+  border-bottom-color: var(--orange) !important;
+}
+
+.quarto-listing-default .quarto-post {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1fr);
+  column-gap: clamp(1.8rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(0.8rem, 2vw, 1.2rem) 0;
+  border-top: 1px solid var(--rule) !important;
+  background: transparent !important;
+}
+
+.quarto-listing-default .quarto-post:first-child {
+  border-top: 0 !important;
+}
+
+.quarto-listing-default .thumbnail {
+  width: 100% !important;
+  max-width: 520px;
+  justify-self: center;
+  margin: 0 !important;
+}
+
+.quarto-listing-default .thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.quarto-listing-default .body,
+.quarto-listing-default .metadata,
+.quarto-listing-default .listing-author {
+  min-width: 0;
+  width: 100% !important;
+}
+
+.quarto-listing-default .listing-title,
+.quarto-listing-default .listing-title a {
+  color: var(--text) !important;
+  font-size: 1.38rem;
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.quarto-listing-default .listing-subtitle {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.quarto-listing-default .listing-description,
+.quarto-listing-default .listing-description p {
+  color: var(--text) !important;
+  font-size: 1rem;
+  line-height: 1.48;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.quarto-listing-category-title,
+.listing-categories,
+.listing-category {
+  font-size: 0.86rem;
+  color: var(--muted) !important;
+}
+
+.teaching-block {
+  padding: 1.15rem 0 1.35rem;
+  border-top: 1px solid var(--rule);
+}
+
+.teaching-date {
+  color: var(--blue);
+  font-weight: 720;
+}
+
+.teaching-block h3 {
+  margin-top: 0;
+}
+
+.sidebar-note {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  color: var(--muted);
+}
+
+.open-data-page {
+  width: 100%;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: stretch;
+}
+
+.chart-card {
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border-left: 4px solid var(--orange);
+  background: var(--surface);
+}
+
+.chart-card h4,
+.chart-card .anchored {
+  margin-top: 0;
+  color: var(--blue);
+  font-size: 1.25rem;
+  font-weight: 520;
+}
+
+.chart-card-text {
+  min-height: 7rem;
+  color: var(--text);
+}
+
+.chart-card-text p {
+  margin-bottom: 0.65rem;
+}
+
+.chart-card .cell-output-display,
+.chart-card .plotly,
+.chart-card .js-plotly-plot {
+  width: 100% !important;
+}
+
+.chart-card-links {
+  margin-top: 0.4rem;
+}
+
+.chart-card-links a {
+  font-weight: 500;
+}
+
+@media (min-width: 1500px) {
+  :root {
+    --width: 1420px;
+  }
+
+  .home-content {
+    max-width: 760px;
+  }
+
+  .home-photo-panel {
+    height: min(620px, calc(100svh - 7rem));
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    font-size: 18px;
+  }
+
+  .home-hero {
+    min-height: auto;
+    grid-template-columns: minmax(170px, 0.55fr) minmax(0, 1fr);
+    gap: clamp(1.25rem, 4vw, 2.25rem);
+    align-items: start;
+    padding-top: clamp(1.6rem, 5vh, 2.6rem);
+  }
+
+  .home-photo-panel {
+    height: auto;
+    min-height: 0;
+    align-self: start;
+    place-items: start end;
+  }
+
+  .home-photo-panel p {
+    width: clamp(150px, 28vw, 230px);
+  }
+
+  .home-content p {
+    font-size: clamp(0.86rem, 2vw, 0.98rem);
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .quarto-listing-default .quarto-post {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .quarto-listing-default .thumbnail {
+    justify-self: start;
+    max-width: min(100%, 520px);
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body:not(:has(.home-hero)) header.quarto-title-block,
+  body:not(:has(.home-hero)) main.content,
+  body:not(:has(.home-hero)) .page-columns,
+  body:not(:has(.home-hero)) .quarto-page-content {
+    max-width: 100% !important;
+    padding-inline: 1rem !important;
+    margin-inline: 0 !important;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1.4rem;
+  }
+
+  .home-photo-panel {
+    place-items: start;
+  }
+
+  .home-photo-panel p {
+    width: clamp(150px, 45vw, 210px);
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 980px) and (orientation: landscape) and (max-height: 520px) {
+  .home-hero {
+    grid-template-columns: clamp(120px, 22vw, 170px) minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .home-photo-panel {
+    height: 100%;
+    min-height: 0;
+    align-self: stretch;
+    place-items: center start;
+  }
+
+  .home-photo-panel p {
+    width: clamp(115px, 20vw, 165px);
+  }
+
+  .home-content p {
+    margin-bottom: 0.32rem;
+    font-size: clamp(0.72rem, 1.45vw, 0.84rem);
+    line-height: 1.24;
+  }
+
+  .home-content h2,
+  .home-content h2 + p,
+  .home-content h2 ~ p {
+    display: none;
+  }
+}
+
+/* Home page should start immediately under the navbar; Quarto title spacing is not used here. */
+body:has(.home-hero) header#title-block-header,
+body:has(.home-hero) .quarto-title-block {
+  display: none !important;
+}
+
+body:has(.home-hero) main.content,
+body:has(.home-hero) .page-columns,
+body:has(.home-hero) .quarto-page-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body:has(.home-hero) .content {
+  padding-top: 0 !important;
+}
+
+/* Navigation and page hierarchy refinement. */
+.navbar-title,
+.navbar-title:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--text) !important;
+}
+
+.quarto-title h1,
+h1.title {
+  color: var(--text) !important;
+}
+
+/* Compact desktop home: fit the full biography and education in the first viewport. */
+@media (min-width: 981px) {
+  .home-hero {
+    min-height: calc(100svh - 56px);
+    max-height: calc(100svh - 56px);
+    padding-top: clamp(0.2rem, 0.9vh, 0.55rem);
+    padding-bottom: clamp(0.2rem, 0.9vh, 0.55rem);
+    grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(1.4rem, 3.2vw, 3rem);
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .home-photo-panel {
+    height: 100%;
+    min-height: 0;
+    align-self: stretch;
+    place-items: center start;
+  }
+
+  .home-photo-panel p {
+    width: clamp(270px, 24vw, 360px);
+  }
+
+  .home-content {
+    max-width: 720px;
+    align-self: center;
+    justify-self: start;
+  }
+
+  .home-content p {
+    margin-bottom: 0.34rem;
+    font-size: clamp(0.86rem, 0.88vw, 0.92rem);
+    line-height: 1.20;
+    text-align: justify;
+  }
+
+  .home-content h2 {
+    margin-top: 0.48rem;
+    margin-bottom: 0.12rem;
+    font-size: 1.12rem;
+    color: var(--blue);
+  }
+
+  .home-content h2 + p,
+  .home-content h2 ~ p {
+    margin-bottom: 0.06rem;
+    font-size: 0.8rem;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: 1500px) {
+  .home-content {
+    max-width: 760px;
+  }
+
+  .home-photo-panel p {
+    width: clamp(300px, 23vw, 370px);
+  }
+}
+
+
+/* Preserve default text weight/style for nav page labels and the University of Leeds link. */
+.navbar-nav .nav-link,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .navbar-nav.ms-auto .nav-link {
+  font-weight: 400 !important;
+}
+
+.edu-link,
+a.edu-link,
+.home-content a.edu-link {
+  font-weight: inherit !important;
+  font-family: inherit !important;
+}
+
+/* Desktop home is a single-screen composition; smaller screens may scroll naturally. */
+@media (min-width: 981px) {
+  html:has(.home-hero),
+  body:has(.home-hero) {
+    height: 100%;
+    overflow-y: hidden !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Final typography/state overrides requested 2026-07-04. */
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--blue) !important;
+}
+
+.quarto-title h1,
+h1.title {
+  font-weight: 800 !important;
+}
+
+.quarto-listing-default .listing-description,
+.quarto-listing-default .listing-description p,
+.quarto-post .listing-description,
+.quarto-post .listing-description p {
+  font-size: 0.92rem !important;
+  line-height: 1.42 !important;
+}
+
+/* Research page refinement: compact abstracts, equal blocks, read-more controls. */
+.quarto-title h1,
+h1.title {
+  font-size: 2.25rem !important;
+  font-weight: 850 !important;
+}
+
+.quarto-listing-default .quarto-post {
+  min-height: 250px;
+  align-items: start;
+}
+
+.quarto-listing-default .body {
+  display: flex;
+  min-height: auto;
+  flex-direction: column;
+}
+
+.quarto-listing-default .listing-title,
+.quarto-listing-default .listing-title a {
+  font-size: 1.34rem;
+  line-height: 1.14;
+  font-weight: 520;
+}
+
+.quarto-listing-default .listing-subtitle {
+  font-size: 0.92rem;
+  line-height: 1.28;
+}
+
+.quarto-listing-default .listing-description,
+.quarto-listing-default .listing-description p,
+.quarto-post .listing-description,
+.quarto-post .listing-description p {
+  font-size: 0.86rem !important;
+  line-height: 1.38 !important;
+}
+
+.quarto-listing-default .listing-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.quarto-listing-default .quarto-post.is-expanded .listing-description {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.research-read-more {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.research-read-more:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+.quarto-listing-default .listing-title a[href]:not([href='']):not([href='#']) {
+  color: var(--link) !important;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+.quarto-listing-default .listing-title a[href]:not([href='']):not([href='#']):hover {
+  color: var(--blue) !important;
+}
+
+#listing-policy-papers .listing-description:empty {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .quarto-listing-default .quarto-post,
+  .quarto-listing-default .body {
+    min-height: 0;
+  }
+}
+
+/* Final research alignment and typography tuning. */
+.navbar-title,
+.navbar-nav .nav-link,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .navbar-nav.ms-auto .nav-link,
+.nav-tabs .nav-link,
+.panel-tabset .nav-tabs .nav-link {
+  font-weight: 400 !important;
+}
+
+body:not(:has(.home-hero)) header.quarto-title-block {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body:not(:has(.home-hero)) header.quarto-title-block .quarto-title {
+  max-width: var(--width) !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(1rem, 3vw, 2rem) !important;
+}
+
+.quarto-listing-default .listing-title,
+.quarto-listing-default .listing-title a {
+  font-size: 1.18rem !important;
+  line-height: 1.16 !important;
+  font-weight: 500 !important;
+}
+
+.quarto-listing-default .listing-subtitle {
+  font-size: 0.88rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Align page titles with the page content/tabs. */
+body:not(:has(.home-hero)) header.quarto-title-block .quarto-title,
+body:not(:has(.home-hero)) header.quarto-title-block .quarto-title h1,
+body:not(:has(.home-hero)) header.quarto-title-block h1.title {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+body:not(:has(.home-hero)) header.quarto-title-block {
+  max-width: var(--width) !important;
+  padding-inline: clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* Quarto adds an inner title offset; cancel it so page titles align with tabs/content. */
+@media (min-width: 701px) {
+  body:not(:has(.home-hero)) header.quarto-title-block h1.title,
+  body:not(:has(.home-hero)) header.quarto-title-block .quarto-title h1 {
+    transform: translateX(calc(-1 * clamp(1rem, 3vw, 2rem))) !important;
+  }
+}
+
+/* Restore requested bold navbar and research tab labels. */
+.navbar-title,
+.navbar-nav .nav-link,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .navbar-nav.ms-auto .nav-link,
+.nav-tabs .nav-link,
+.panel-tabset .nav-tabs .nav-link {
+  font-weight: 700 !important;
+}
+
+/* Static background image using selected candidate 4.png. */
+html,
+body {
+  background-color: var(--bg) !important;
+}
+
+body {
+  background-image:
+    url("images/4.png");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.navbar,
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  background: rgba(244, 241, 234, 0.0) !important;
+  backdrop-filter: blur(3px);
+}
+
+@media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
+/* Open Data card and chart alignment. */
+.chart-grid {
+  align-items: stretch;
+}
+
+.chart-card {
+  display: flex;
+  min-height: 560px;
+  flex-direction: column;
+}
+
+.chart-card-text {
+  min-height: 8.5rem;
+}
+
+.chart-card .cell,
+.chart-card .cell-output-display,
+.chart-card .plotly,
+.chart-card .js-plotly-plot {
+  width: 100% !important;
+}
+
+.chart-card .cell-output-display {
+  min-height: 315px;
+  margin-top: auto;
+}
+
+.chart-card-links {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.chart-card-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .chart-card {
+    min-height: 0;
+  }
+
+  .chart-card .cell-output-display {
+    min-height: 0;
+  }
+}
+
+/* --- High-Performance CSS Animations --- */
+
+/* 1. Smooth Fade-in & Slide-up for page content on load */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main.content {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 2. Subtle lift and shadow for Research / Blog posts on hover */
+.quarto-listing-default .quarto-post {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, padding 0.25s ease;
+  border-radius: 6px;
+  padding-left: 1rem !important; 
+  padding-right: 1rem !important;
+  border-top: 1px solid transparent !important; /* hide default border to use shadow */
+  border-bottom: 1px solid var(--rule); /* separate items from below */
+  margin-bottom: 1rem;
+}
+
+.quarto-listing-default .quarto-post:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 12px 36px rgba(36, 49, 58, 0.08);
+  border-bottom-color: transparent;
+}
+
+/* 3. Image subtle zoom on post hover */
+.quarto-listing-default .thumbnail {
+  overflow: hidden; /* Ensure zoomed image stays in box */
+  border-radius: 4px;
+}
+
+.quarto-listing-default .thumbnail img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quarto-listing-default .quarto-post:hover .thumbnail img {
+  transform: scale(1.04);
+}
+
+/* 4. Chart cards lift (for the Data page) */
+.chart-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(36, 49, 58, 0.09);
+}
+
+/* 5. Justify text in all posts */
+main.content p,
+main.content li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 6. Language Toggle Default State */
+.lang-es {
+  display: none;
+}

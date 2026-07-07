@@ -1,0 +1,284 @@
+---
+pagetitle: "Data"
+page-layout: full
+jupyter: python3
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{python}
+#| label: setup-open-data
+#| echo: false
+#| output: false
+from urllib.error import URLError
+from pathlib import Path
+
+import pandas as pd
+import plotly.graph_objects as go
+
+PALETTE = {
+    "blue_deep": "#00466F",
+    "orange": "#F38C10",
+    "blue": "#3297DB",
+    "teal": "#037E73",
+    "red": "#C62828",
+    "yellow": "#FEBD00",
+    "green": "#41B01E",
+    "coral": "#E84C3D",
+    "charcoal": "#3D3D3D",
+}
+
+REPOS = {
+    "gfc": "https://github.com/iweigandi/daily-global-financial-cycle-proxy",
+    "cip": "https://github.com/iweigandi/usd-chf-cip-deviations",
+    "gsib": "https://github.com/iweigandi/gsib-leverage",
+    "fx": "https://github.com/iweigandi/fx-dealer-positions",
+}
+
+RAW = {
+    key: url.replace("https://github.com/", "https://raw.githubusercontent.com/") + "/main"
+    for key, url in REPOS.items()
+}
+
+LOCAL_DATA = {
+    "gfc": Path("../gfc-proxy/data"),
+}
+
+
+def read_public_csv(project: str, filename: str, **kwargs) -> pd.DataFrame:
+    url = f"{RAW[project]}/data/{filename}"
+    try:
+        return pd.read_csv(url, **kwargs)
+    except (URLError, OSError, ValueError):
+        local_dir = LOCAL_DATA.get(project)
+        if local_dir is None:
+            raise
+        return pd.read_csv(local_dir / filename, **kwargs)
+
+
+def base_layout(height=285, left=48, bottom=72):
+    return dict(
+        height=height,
+        margin={"l": left, "r": 14, "t": 8, "b": bottom},
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(255,255,255,0.56)",
+        font={"family": "Segoe UI, Aptos, system-ui, sans-serif", "size": 11, "color": "#1d252c"},
+        hovermode="x unified",
+        legend={"orientation": "h", "y": -0.26, "x": 0.5, "xanchor": "center", "yanchor": "top", "bgcolor": "rgba(255,255,255,0)", "font": {"size": 10}},
+    )
+
+
+gfc_daily = read_public_csv("gfc", "gfc_proxy_daily.csv", index_col=0, parse_dates=True).rename(columns={"GFC Proxy-Daily": "Daily proxy"})
+gfc_monthly = read_public_csv("gfc", "gfc_proxies_monthly.csv", index_col=0, parse_dates=True).rename(columns={"GFC Proxy-Monthly": "Monthly proxy"})
+cip = read_public_csv("cip", "usd_chf_cip_deviations_monthly.csv", parse_dates=["Date"])
+gsib = read_public_csv("gsib", "gsib_market_leverage.csv", parse_dates=["date"])
+fx_panel = read_public_csv("fx", "panel_data.csv", parse_dates=["date"])
+fx_cross = read_public_csv("fx", "cross_section_means.csv")
+fx_bcb = read_public_csv("fx", "bcb_focus_brl_usd_expectations.csv", parse_dates=["survey_date"])
+fx_ecb = read_public_csv("fx", "ecb_spf_eur_usd_expectations.csv", parse_dates=["survey_date"])
+
+
+def survey_uip_points(panel, bcb, ecb):
+    rows = []
+    if "EUR" in set(panel["ccy"]):
+        exp = ecb[ecb["horizon_years_approx"].round().eq(1)].dropna(subset=["expected_log_change_eur_per_usd"])
+        if not exp.empty:
+            exp = exp.sort_values(["survey_date", "target_year"]).groupby("survey_date").tail(1)
+            exp = exp.set_index("survey_date")["expected_log_change_eur_per_usd"].resample("ME").last()
+            eur = panel[panel["ccy"].eq("EUR")].set_index("date").join(exp.rename("expected_change"), how="left")
+            value = (eur["idiff"] - eur["expected_change"]).dropna().mean()
+            if pd.notna(value):
+                rows.append({"ccy": "EUR", "value": value})
+    if "BRL" in set(panel["ccy"]):
+        exp = bcb[bcb["horizon_years_approx"].round().eq(1)].dropna(subset=["expected_log_change_brl_per_usd"])
+        if not exp.empty:
+            exp = exp.sort_values(["survey_date", "target_year"]).groupby("survey_date").tail(1)
+            exp = exp.set_index("survey_date")["expected_log_change_brl_per_usd"].resample("ME").last()
+            brl = panel[panel["ccy"].eq("BRL")].set_index("date").join(exp.rename("expected_change"), how="left")
+            value = (brl["idiff"] - brl["expected_change"]).dropna().mean()
+            if pd.notna(value):
+                rows.append({"ccy": "BRL", "value": value})
+    return pd.DataFrame(rows)
+
+fx_survey = survey_uip_points(fx_panel, fx_bcb, fx_ecb)
+```
+
+::: {.open-data-page .open-data-compact}
+::: {.chart-grid}
+::: {.chart-card .chart-card-main}
+::: {.lang-en}
+#### Daily Global Financial Cycle proxy
+
+::: {.chart-card-text}
+Following Habib & Venditti (2019), the proxy is the first principal component of national and sectoral equity-market index returns.
+
+$$r_{j,t} = \lambda_j f_t^{\mathrm{global}} + \xi_{j,t}$$
+
+[Repository](https://github.com/iweigandi/daily-global-financial-cycle-proxy)
+:::
+:::
+::: {.lang-es}
+#### Proxy diario del Ciclo Financiero Global
+
+::: {.chart-card-text}
+Siguiendo a Habib y Venditti (2019), el proxy es el primer componente principal de los retornos de índices del mercado de capitales nacionales y sectoriales.
+
+$$r_{j,t} = \lambda_j f_t^{\mathrm{global}} + \xi_{j,t}$$
+
+[Repositorio](https://github.com/iweigandi/daily-global-financial-cycle-proxy)
+:::
+:::
+
+```{python}
+#| label: gfc-proxy-chart
+#| echo: false
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=gfc_daily.index, y=gfc_daily["Daily proxy"], mode="lines", name="Daily", line={"color": PALETTE["blue_deep"], "width": 1.2}, hovertemplate="%{x|%d %b %Y}<br>Daily: %{y:.2f}<extra></extra>"))
+fig.add_trace(go.Scatter(x=gfc_monthly.index, y=gfc_monthly["Monthly proxy"], mode="lines", name="Monthly", line={"color": PALETTE["orange"], "width": 2.2}, hovertemplate="%{x|%b %Y}<br>Monthly: %{y:.2f}<extra></extra>"))
+fig.add_hline(y=0, line_width=1, line_color="rgba(29,37,44,0.30)")
+fig.update_layout(**base_layout(left=58), yaxis={"title": "Standardized value (cumulative)", "showgrid": False, "zeroline": False, "linecolor": "rgba(29,37,44,0.35)"})
+fig.show(config={"displayModeBar": False, "responsive": True})
+```
+
+:::
+
+::: {.chart-card}
+::: {.lang-en}
+#### Covered Interest Parity deviations in CHF-USD 
+
+::: {.chart-card-text}
+Monthly USD-CHF CIP basis using SOFR vs SARON (3m, 6m) and government debt (3m), spot and forward exchange rate rates.
+
+$$CIPD_t^{(T)} = \left(r_{USD,t}^{(T)} - r_{CHF,t}^{(T)}\right) + \frac{1}{T}\log\left(\frac{F_t^{(T)}}{S_t}\right)$$
+
+[Repository](https://github.com/iweigandi/usd-chf-cip-deviations)
+:::
+:::
+::: {.lang-es}
+#### Desviaciones de la Paridad de Tasas de Interés Cubierta en CHF-USD 
+
+::: {.chart-card-text}
+Bases mensuales de CIP USD-CHF utilizando SOFR vs SARON (3m, 6m) y deuda gubernamental (3m), y tipos de cambio spot y forward.
+
+$$CIPD_t^{(T)} = \left(r_{USD,t}^{(T)} - r_{CHF,t}^{(T)}\right) + \frac{1}{T}\log\left(\frac{F_t^{(T)}}{S_t}\right)$$
+
+[Repositorio](https://github.com/iweigandi/usd-chf-cip-deviations)
+:::
+:::
+
+```{python}
+#| label: cip-chart
+#| echo: false
+fig = go.Figure()
+cip_series = [
+    ("cip_basis_sofr_saron_3m_bps", "SOFR-SARON 3m", PALETTE["blue_deep"]),
+    ("cip_basis_sofr_saron_6m_bps", "SOFR-SARON 6m", PALETTE["orange"]),
+    ("cip_basis_libor_3m_bps", "LIBOR 3m", PALETTE["blue"]),
+    ("cip_basis_government_3m_bps", "Government 3m", PALETTE["teal"]),
+]
+for col, name, color in cip_series:
+    fig.add_trace(go.Scatter(x=cip["Date"], y=cip[col], mode="lines", name=name, line={"color": color, "width": 1.55}, hovertemplate=f"%{{x|%b %Y}}<br>{name}: %{{y:.1f}} bps<extra></extra>"))
+fig.add_hline(y=0, line_width=1, line_color="rgba(29,37,44,0.30)")
+fig.update_layout(**base_layout(left=48), yaxis={"title": "Basis points", "showgrid": False, "zeroline": False, "linecolor": "rgba(29,37,44,0.35)"})
+fig.show(config={"displayModeBar": False, "responsive": True})
+```
+
+:::
+
+::: {.chart-card}
+::: {.lang-en}
+#### G-SIBs' market leverage
+
+::: {.chart-card-text}
+Market leverage is decomposed into common-factor and idiosyncratic equity-price components for global systemically important banks.
+
+$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{Common} + \underbrace{u_{b,t}}_{Idiosyncratic}) $$
+
+[Repository](https://github.com/iweigandi/gsib-leverage)
+:::
+:::
+::: {.lang-es}
+#### Apalancamiento de mercado de los G-SIBs
+
+::: {.chart-card-text}
+El apalancamiento de mercado se descompone en factores comunes e idiosincráticos de precios de acciones para los bancos de importancia sistémica global.
+
+$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{Común} + \underbrace{u_{b,t}}_{Idiosincrático}) $$
+
+[Repositorio](https://github.com/iweigandi/gsib-leverage)
+:::
+:::
+
+```{python}
+#| label: gsib-chart
+#| echo: false
+plot_data = gsib.dropna(subset=["market_leverage"]).copy()
+initial = plot_data["initial_leverage"]
+common_top = initial + plot_data["common_factor_component"]
+reconstructed = plot_data["reconstructed_market_leverage"]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=plot_data["date"], y=initial, mode="lines", line={"color": "rgba(0,0,0,0)", "width": 0}, hoverinfo="skip", showlegend=False))
+fig.add_trace(go.Scatter(x=plot_data["date"], y=common_top, mode="lines", name="Common factor", line={"color": "rgba(243,140,16,0.28)", "width": 0}, fill="tonexty", fillcolor="rgba(248,201,143,0.78)", hovertemplate="%{x|%d %b %Y}<br>Common top: %{y:.1f}<extra></extra>"))
+fig.add_trace(go.Scatter(x=plot_data["date"], y=reconstructed, mode="lines", name="Idiosyncratic", line={"color": "rgba(3,126,115,0.26)", "width": 0}, fill="tonexty", fillcolor="rgba(148,201,195,0.78)", hovertemplate="%{x|%d %b %Y}<br>Reconstructed: %{y:.1f}<extra></extra>"))
+fig.add_trace(go.Scatter(x=plot_data["date"], y=plot_data["market_leverage"], mode="lines", name="Market leverage", line={"color": PALETTE["blue_deep"], "width": 1.8}, hovertemplate="%{x|%d %b %Y}<br>Leverage: %{y:.1f}<extra></extra>"))
+fig.add_hline(y=float(initial.iloc[0]), line_width=1, line_color="rgba(61,61,61,0.28)")
+low_series = pd.concat([plot_data["market_leverage"], common_top, reconstructed], axis=1).min(axis=1)
+high_series = pd.concat([plot_data["market_leverage"], common_top, reconstructed], axis=1).max(axis=1)
+ymin = min(float(low_series.min()) - 2, float(initial.iloc[0]) - 18)
+ymax = float(high_series.max()) + 4
+fig.update_layout(**base_layout(left=48), yaxis={"title": "Market leverage", "range": [ymin, ymax], "showgrid": False, "zeroline": False, "linecolor": "rgba(29,37,44,0.35)"})
+fig.show(config={"displayModeBar": False, "responsive": True})
+```
+
+:::
+
+::: {.chart-card}
+::: {.lang-en}
+#### FX dealer positions and UIP outcomes
+
+::: {.chart-card-text}
+Cross-currency averages relate dealer net positions to interest-rate differentials, survey and realized UIP outcomes.
+
+$$f^{*}_{k,t} = 100 \times \frac{ \mathrm{DealerLong}_{k,t} - \mathrm{DealerShort}_{k,t} }{ \frac{1}{12} \sum_{j=0}^{11} \mathrm{OpenInterest}_{k,t-j} }$$
+
+[Repository](https://github.com/iweigandi/fx-dealer-positions)
+:::
+:::
+::: {.lang-es}
+#### Posiciones de dealers en FX y resultados de UIP
+
+::: {.chart-card-text}
+Promedios de cruces de monedas relacionan las posiciones netas de los dealers con diferenciales de tasas de interés, encuestas y resultados de UIP observados.
+
+$$f^{*}_{k,t} = 100 \times \frac{ \mathrm{DealerLong}_{k,t} - \mathrm{DealerShort}_{k,t} }{ \frac{1}{12} \sum_{j=0}^{11} \mathrm{OpenInterest}_{k,t-j} }$$
+
+[Repositorio](https://github.com/iweigandi/fx-dealer-positions)
+:::
+:::
+
+```{python}
+#| label: fx-scatter-chart
+#| echo: false
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=fx_cross["fstar"], y=fx_cross["idiff"], mode="markers+text", name="Rate differential", text=fx_cross["ccy"], textposition="top center", marker={"color": PALETTE["blue_deep"], "size": 8, "opacity": 0.88}, hovertemplate="%{text}<br>Dealer position: %{x:.1f}<br>Rate differential: %{y:.3f}<extra></extra>"))
+fig.add_trace(go.Scatter(x=fx_cross["fstar"], y=fx_cross["realized_uip_1y"], mode="markers+text", name="Realized UIP", text=fx_cross["ccy"], textposition="bottom center", marker={"color": PALETTE["blue"], "size": 8, "opacity": 0.72}, hovertemplate="%{text}<br>Dealer position: %{x:.1f}<br>Realized UIP: %{y:.3f}<extra></extra>"))
+if not fx_survey.empty:
+    survey_plot = fx_survey.merge(fx_cross[["ccy", "fstar"]], on="ccy", how="left").dropna(subset=["fstar", "value"])
+    fig.add_trace(go.Scatter(x=survey_plot["fstar"], y=survey_plot["value"], mode="markers+text", name="Survey UIP", text=survey_plot["ccy"], textposition="middle right", marker={"color": PALETTE["orange"], "size": 9, "opacity": 0.9, "symbol": "diamond"}, hovertemplate="%{text}<br>Dealer position: %{x:.1f}<br>Survey UIP: %{y:.3f}<extra></extra>"))
+fig.add_hline(y=0, line_width=1, line_color="rgba(29,37,44,0.30)")
+fig.add_vline(x=0, line_width=1, line_color="rgba(29,37,44,0.30)")
+fig.update_layout(**base_layout(left=48), xaxis={"title": "Dealer net position (% of OI)", "showgrid": False, "zeroline": False, "linecolor": "rgba(29,37,44,0.35)"}, yaxis={"title": "Average value", "showgrid": False, "zeroline": False, "linecolor": "rgba(29,37,44,0.35)"})
+fig.show(config={"displayModeBar": False, "responsive": True})
+```
+
+:::
+:::
+:::
+
+
+
+
+

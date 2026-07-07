@@ -1,0 +1,58 @@
+---
+pagetitle: "Research"
+page-layout: full
+format:
+  html:
+    page-layout: full
+    grid:
+      body-width: 1600px      # <--- Forces the central column to be huge
+      sidebar-width: 0px      # Remove sidebar reservation
+      margin-width: 0px       # Remove margin reservation
+listing:
+  - id: publications
+    contents: research_files/journals.yml
+    sort: "date desc"
+    type: default
+    image-align: left
+    categories: false
+    # Subtitle is used for your text date ("Q2 2026")
+    fields: [image, title, subtitle, description] 
+    
+  - id: working-papers
+    contents: research_files/working_papers.yml
+    sort: "date desc"
+    type: default
+    image-align: left
+    fields: [image, title, subtitle,  description]
+
+  - id: policy-papers
+    contents: research_files/policy.yml
+    sort: "date desc"
+    type: default
+    image-align: left
+    fields: [image, title, subtitle,  description]
+
+    
+---
+::: {.panel-tabset}
+
+## Publications
+
+::: {#publications}
+:::
+
+## Working Papers
+
+::: {#working-papers}
+:::
+
+## Policy & Other
+
+::: {#policy-papers}
+:::
+
+:::
+```{=html}
+<script src="research-enhancements.js"></script>
+```
+

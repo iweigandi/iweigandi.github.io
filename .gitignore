@@ -1,0 +1,26 @@
+﻿# Quarto output
+/_site/
+/.quarto/
+
+# Local checks and screenshots
+/responsive-check/
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.jupyter_cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Local scratch files
+*_tmp.py
+temp_*.py
+*.before-cleanup.*
+
+# Local document temp files
+.vdoc.*.tmp
