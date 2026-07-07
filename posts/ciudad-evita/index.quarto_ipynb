@@ -1,0 +1,123 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "d471c031",
+   "metadata": {},
+   "source": [
+    "﻿---\n",
+    "title: \"¿Cuantas rotondas sin salida hay en Ciudad Evita?\"\n",
+    "author: \"Iván Weigandi\"\n",
+    "date: \"2026-11-15\"\n",
+    "categories: [Ciudad Evita, Data visualization, Urban planning]\n",
+    "image: \"map.png\"\n",
+    "---\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "422672f1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#| eval: false\n",
+    "import osmnx as ox\n",
+    "import networkx as nx\n",
+    "import geopandas as gpd\n",
+    "import matplotlib.pyplot as plt\n",
+    "from shapely.affinity import rotate\n",
+    "from shapely.geometry import Point\n",
+    "from shapely.ops import unary_union\n",
+    "\n",
+    "# 1. Fetch street network\n",
+    "place = \"Ciudad Evita, La Matanza, Argentina\"\n",
+    "G_uns = ox.graph_from_place(place, network_type=\"drive\", simplify=False)\n",
+    "G_nd = nx.Graph(G_uns)\n",
+    "\n",
+    "# 2. Detect roundabouts (cycles with 1 external connection)\n",
+    "cycles = nx.cycle_basis(G_nd)\n",
+    "dead_cycles = [\n",
+    "    c for c in cycles \n",
+    "    if len({nb for n in c for nb in G_nd.neighbors(n) if nb not in c}) == 1\n",
+    "]\n",
+    "\n",
+    "# 3. Detect cul-de-sacs (dead-ends)\n",
+    "streets_per_node = ox.stats.count_streets_per_node(G_uns)\n",
+    "cul_nodes = {n for n, cnt in streets_per_node.items() if cnt == 1}\n",
+    "\n",
+    "# 4. Extract geometries for plotting\n",
+    "edges_uns = ox.graph_to_gdfs(G_uns, nodes=False, edges=True).reset_index()\n",
+    "edges_uns['uv'] = edges_uns.apply(lambda r: tuple(sorted((r['u'], r['v']))), axis=1)\n",
+    "\n",
+    "# Extract loops\n",
+    "loop_geoms = [\n",
+    "    edges_uns.loc[edges_uns['uv'] == tuple(sorted((u, v))), 'geometry'].iloc[0]\n",
+    "    for cyc in dead_cycles for u, v in zip(cyc, cyc[1:] + [cyc[0]])\n",
+    "]\n",
+    "cycle_gs = gpd.GeoSeries(loop_geoms, crs=\"EPSG:4326\")\n",
+    "\n",
+    "# Extract dead-end points\n",
+    "pts = gpd.GeoSeries(\n",
+    "    [Point(G_uns.nodes[n]['x'], G_uns.nodes[n]['y']) for n in cul_nodes], \n",
+    "    crs=\"EPSG:4326\"\n",
+    ")\n",
+    "\n",
+    "# Rotate geometries for a better visual angle\n",
+    "rotation_angle = 220\n",
+    "area = ox.geocode_to_gdf(place)\n",
+    "ctr = area.geometry.centroid.iloc[0]\n",
+    "\n",
+    "all_edges = edges_uns.drop_duplicates(subset='uv').set_geometry('geometry')\n",
+    "all_rot = all_edges.geometry.apply(lambda g: rotate(g, rotation_angle, origin=(ctr.x, ctr.y)))\n",
+    "cycle_rot = cycle_gs.apply(lambda g: rotate(g, rotation_angle, origin=(ctr.x, ctr.y)))\n",
+    "pts_rot = pts.apply(lambda p: rotate(p, rotation_angle, origin=(ctr.x, ctr.y)))\n",
+    "\n",
+    "# 5. Plot the chart\n",
+    "fig, ax = plt.subplots(figsize=(10, 10))\n",
+    "all_rot.plot(ax=ax, linewidth=1, color='gray', alpha=0.5, label='Todas las calles')\n",
+    "cycle_rot.plot(ax=ax, linewidth=3, color='red', label='Calle sin salida')\n",
+    "pts_rot.plot(ax=ax, markersize=30, color='purple', label='Rotondas cul-de-sac')\n",
+    "\n",
+    "ax.set_aspect('equal')\n",
+    "ax.axis('off')\n",
+    "ax.legend(loc='upper left', frameon=False)\n",
+    "ax.set_title(\"Ciudad Evita Street Network\", fontsize=16)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fe321958",
+   "metadata": {},
+   "source": [
+    "![](map.png)\n",
+    "\n",
+    "\n",
+    "Fua banda"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3",
+   "path": "C:\\Users\\wdi_w\\AppData\\Local\\anaconda3\\share\\jupyter\\kernels\\python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

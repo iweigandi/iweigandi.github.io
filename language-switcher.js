@@ -67,6 +67,21 @@
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: lang }));
   }
 
+
+  function setupEmailLink() {
+    const emailLink = Array.from(document.querySelectorAll('.navbar a.nav-link')).find(link =>
+      link.querySelector('.bi-envelope')
+    );
+    if (!emailLink) return;
+
+    const address = ['iweigandi', 'gmail.com'].join('@');
+    emailLink.setAttribute('aria-label', 'Email');
+    emailLink.setAttribute('title', 'Email');
+    emailLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.location.href = `mailto:${address}`;
+    });
+  }
   document.addEventListener('DOMContentLoaded', () => {
     let rightNav = document.querySelector('.navbar-nav.navbar-nav-scroll.ms-auto');
     if (!rightNav) rightNav = document.querySelector('.navbar-nav.ms-auto');
@@ -100,6 +115,8 @@
       rightNav.insertBefore(li, rightNav.firstChild);
     }
     
+    setupEmailLink();
+
     if (currentLang === 'es') {
       applyLanguage('es');
     } else {
