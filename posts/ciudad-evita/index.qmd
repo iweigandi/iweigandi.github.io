@@ -4,6 +4,8 @@ author: "Iván Weigandi"
 date: "2026-11-15"
 categories: [Ciudad Evita, Data visualization, Urban planning]
 image: "map.png"
+draft: true
+
 ---
 
 

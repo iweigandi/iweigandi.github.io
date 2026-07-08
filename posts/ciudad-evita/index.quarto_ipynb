@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "d471c031",
+   "id": "367753ce",
    "metadata": {},
    "source": [
     "﻿---\n",
@@ -11,13 +11,15 @@
     "date: \"2026-11-15\"\n",
     "categories: [Ciudad Evita, Data visualization, Urban planning]\n",
     "image: \"map.png\"\n",
+    "draft: true\n",
+    "\n",
     "---\n"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "422672f1",
+   "id": "08238d86",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -88,7 +90,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "fe321958",
+   "id": "f538c967",
    "metadata": {},
    "source": [
     "![](map.png)\n",

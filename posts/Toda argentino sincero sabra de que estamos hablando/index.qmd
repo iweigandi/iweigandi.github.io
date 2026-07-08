@@ -2,8 +2,11 @@
 title: "Toda argentino sincero sabra de que estamos hablando"
 author: "Iván Weigandi"
 date: "2026-11-01"
+draft: true
 categories: [Argentina, exchange rates]
 image: "image.jpg"
+
+
 ---
 
 Bla bla bla
