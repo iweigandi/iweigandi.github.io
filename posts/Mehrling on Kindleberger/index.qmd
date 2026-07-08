@@ -4,7 +4,7 @@ subtitle: "Some appreciations on Money and Empire: Charles P. Kindleberger and t
 author: "Iván Weigandi"
 date: "2026-11-01"
 categories: [Book review, Global money]
-image: "mehrling.jfif"
+image: "mehrling.jpg"
 ---
 
 In 2022, I reviewed Perry Merhling's book on Kindleberger and the global dollar system, for Economic Issues. <http://economicissues.org.uk/Files/2022/EI_Sept2022_reviews.pdf>. Just to fill a bit the empty space in this blog, this the original longer version I wrote.
