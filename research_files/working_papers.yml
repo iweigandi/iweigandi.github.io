@@ -1,50 +1,202 @@
-- title: "Global Banks’ Leverage and Global Liquidity"
-
-  date: "2026-06-01"
-  subtitle: "Under review at the Journal of International Money and Finance"
-  image: "images/Research/publications/leverage2026.png"
-  description: |
-    
-
-    This paper studies the role of global banks as a source of shocks to global liquidity. Shifts in global liquidity can drive cross-border flows, asset prices, and exchange rates, with implications for financial stability. While the existing literature emphasizes global banks as amplifiers of global shocks, I provide causal evidence that idiosyncratic leverage shocks to these institutions loosen global liquidity conditions. The analysis exploits the high concentration of global banking to construct a Granular Instrumental Variable from the size-weighted sum of bank-level idiosyncratic leverage shocks. These shocks are estimated using Instrumented Principal Component Analysis, which accounts for bank-specific and time-varying exposures to common global factors. Using the instrument and panel local projections, I estimate the dynamic causal effects of these banks' leverage shocks on key global liquidity measures for an unbalanced panel of 74 advanced and emerging market economies from 2000Q1 to 2022Q4. Higher global banks' leverage shocks significantly appreciate exchange rates against the dollar, reduce US dollar-denominated bond spreads, and increase gross cross-border inflows. Significant effects on total cross-border flows indicate broader spillovers across asset markets. They underscore the systemic relevance of G-SIBs in driving global financial conditions and support macro-financial models where financial intermediaries' leverage is a key state variable influencing risk-taking and asset prices. By showing that global banks can originate, rather than merely transmit, global shocks, this paper adds to the literature on the global financial cycle and the international transmission of financial conditions.
-    
-    [Mark Hayes Prize]{.d-inline-block .border .border-primary .text-primary .rounded .px-2 .py-1 style="font-size: 0.8rem;"}
-- title: "Hierarchical, cyclical and increasingly market-based: The rise of non-bank financial institutions in global finance"
-  date: "2021-06-01"
-  subtitle: "Invited contribution to Development and Change Forum"
-  image: "images/Research/publications/NBFIs.png"
-
-  description: |
-      This paper examines how the rise of Non-Bank Financial Institutions (NBFIs) is reshaping the cyclical and hierarchical features of the international monetary and financial system (IMFS), with particular focus on the implications for Global South economies. It argues that the expansion of NBFIs reorganizes rather than replaces bank-based intermediation, deepening financial integration through new creditor structures and market-based practices. By reconceptualizing counterparty risk as funding fragility, the study highlights how the composition and behavior of creditors serve as decisive factors for a borrower’s financial resilience. To clarify these dynamics, the paper develops a functional taxonomy of NBFI activities, situating them within an extended banking system. This framework moves beyond the bank-non-bank dichotomy to show how specific funding structures determine leverage elasticity and condition the interaction between NBFIs and traditional banks. The analysis reveals that NBFIs actively providing funding to the Global South are often equity-driven, leading to procyclical behavior that amplifies boom-bust dynamics and exposes emerging markets to redemption risks and benchmark-driven flows. Furthermore, the paper finds that the concentration of NBFIs in advanced economies reinforces the international role of the US dollar and maintains established creditworthiness conventions. Ultimately, the rise of NBFIs extends global financial circuits without altering the underlying asymmetries of access to liquidity. For the Global South, resilience depends not only on debt sustainability but on managing structural dependencies within this evolving creditor landscape.
+- title: Global Banks’ Leverage and Global Liquidity
+  date: '2026-06-01'
+  label: Working Papers
+  subtitle: Under review at the Journal of International Money and Finance
+  image: images/Research/publications/leverage2026.png
+  description: '
 
 
-- title: "An Investigation into the Barriers to Local Currency Lending by Multilateral Development Banks"
-  date: "2020-12-31"
-  subtitle: "In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi, Karina Patricio Ferreira Lima."
-  image: "images/Research/publications/MDB.jpg"
-  description: |
-      A key manifestation of international financial subordination - and macro-financial constraint on development - is the need of developing countries to issue foreign currency debt. Indeed, the literature on “original sin” has widely discussed the negative implications of foreign currency debt, including external vulnerability, the risk of financial crisis, and structural constraints on balance of payments. Though some larger emerging economies have managed to issue local currency debt, the often-large share of non-resident investors in this debt has created new vulnerabilities, such as heightened vulnerability to the global financial cycle and large exchange rate movements independent of domestic economic conditions (original sin redux). These vulnerabilities put the spotlight on the need for long-term, development-oriented providers of foreign financial resources to break that cycle and provide stable, local currency lending to countries in the Global South. As of yet though Development Finance Institutions do very little of that and remain stuck in the Bretton Woods era of dollar financing. This paper investigates the barriers to scaling up local currency financing by Multilateral Development Banks. Drawing on an extensive mixed-method study of MDB lending which combines semi-structured interviews and a survey with MDB representatives, it puts a spotlight particularly on the institutional, regulatory and cultural barriers which hinder MDBs to break out of dollar dominance and terminate the vicious cycle of foreign currency borrowing and IFS.
+    This paper studies the role of global banks as a source of shocks to global liquidity.
+    Shifts in global liquidity can drive cross-border flows, asset prices, and exchange
+    rates, with implications for financial stability. While the existing literature
+    emphasizes global banks as amplifiers of global shocks, I provide causal evidence
+    that idiosyncratic leverage shocks to these institutions loosen global liquidity
+    conditions. The analysis exploits the high concentration of global banking to
+    construct a Granular Instrumental Variable from the size-weighted sum of bank-level
+    idiosyncratic leverage shocks. These shocks are estimated using Instrumented Principal
+    Component Analysis, which accounts for bank-specific and time-varying exposures
+    to common global factors. Using the instrument and panel local projections, I
+    estimate the dynamic causal effects of these banks'' leverage shocks on key global
+    liquidity measures for an unbalanced panel of 74 advanced and emerging market
+    economies from 2000Q1 to 2022Q4. Higher global banks'' leverage shocks significantly
+    appreciate exchange rates against the dollar, reduce US dollar-denominated bond
+    spreads, and increase gross cross-border inflows. Significant effects on total
+    cross-border flows indicate broader spillovers across asset markets. They underscore
+    the systemic relevance of G-SIBs in driving global financial conditions and support
+    macro-financial models where financial intermediaries'' leverage is a key state
+    variable influencing risk-taking and asset prices. By showing that global banks
+    can originate, rather than merely transmit, global shocks, this paper adds to
+    the literature on the global financial cycle and the international transmission
+    of financial conditions.
 
 
-- title: "Causal Effects of Mutual Funds' Flows on Exchange Rates"
-  date: "2020-12-31"
-  subtitle: "In preparation - Co-author: Karsten Kohler."
-  image: "images/Research/publications/GIV.png"
+    [Mark Hayes Prize]{.d-inline-block .border .border-primary .text-primary .rounded
+    .px-2 .py-1 style="font-size: 0.8rem;"}
 
-  description: |
-      This paper identifies the causal effect of mutual fund flows on exchange rate dynamics in emerging markets by combining a granular instrumental variables (GIV) approach with a local projections framework. Utilizing high-frequency, security-level data from SEC Form N-PORT, we exploit the concentrated structure of the asset management industry to construct an instrument for capital flows based on the idiosyncratic shocks of large, systemic investment funds. This strategy isolates supply-side shifts in the behavior of non-bank financial institutions from domestic demand-side factors, providing a robust identification of the transmission of financial shocks. Our results indicate that exogenous inflows from these institutions lead to a significant and persistent appreciation of the local currency. The identification remains robust under an extensive suite of fund-level and country-level controls, ensuring that the estimated effects are not driven by global financial conditions, risk sentiment, or common shocks to international portfolio allocations. By documenting how the portfolio reallocations of a small number of granular non-bank actors drive currency fluctuations, the study highlights the role of market-based intermediation in reinforcing the cyclical and hierarchical features of the international monetary system. The findings suggest that the institutional structure of global finance is a first-order determinant of exchange rate volatility and external vulnerability in developing economies.
+    '
+  path: research.html
+- title: 'Hierarchical, cyclical and increasingly market-based: The rise of non-bank
+    financial institutions in global finance'
+  date: '2021-06-01'
+  label: Working Papers
+  subtitle: Invited contribution to Development and Change Forum
+  image: images/Research/publications/NBFIs.png
+  description: 'This paper examines how the rise of Non-Bank Financial Institutions
+    (NBFIs) is reshaping the cyclical and hierarchical features of the international
+    monetary and financial system (IMFS), with particular focus on the implications
+    for Global South economies. It argues that the expansion of NBFIs reorganizes
+    rather than replaces bank-based intermediation, deepening financial integration
+    through new creditor structures and market-based practices. By reconceptualizing
+    counterparty risk as funding fragility, the study highlights how the composition
+    and behavior of creditors serve as decisive factors for a borrower’s financial
+    resilience. To clarify these dynamics, the paper develops a functional taxonomy
+    of NBFI activities, situating them within an extended banking system. This framework
+    moves beyond the bank-non-bank dichotomy to show how specific funding structures
+    determine leverage elasticity and condition the interaction between NBFIs and
+    traditional banks. The analysis reveals that NBFIs actively providing funding
+    to the Global South are often equity-driven, leading to procyclical behavior that
+    amplifies boom-bust dynamics and exposes emerging markets to redemption risks
+    and benchmark-driven flows. Furthermore, the paper finds that the concentration
+    of NBFIs in advanced economies reinforces the international role of the US dollar
+    and maintains established creditworthiness conventions. Ultimately, the rise of
+    NBFIs extends global financial circuits without altering the underlying asymmetries
+    of access to liquidity. For the Global South, resilience depends not only on debt
+    sustainability but on managing structural dependencies within this evolving creditor
+    landscape.
 
-- title: "Global Banks and Offshore US Dollar Funding"
-  date: "2020-12-31"
-  subtitle: "In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi."
-  image: "images/Research/publications/network.png"
-  description: |
-      This paper examines hierarchical funding fragilities in global banking through a balance-sheet framework of layered international settlements to show how funding relationship structures determine banks’ hierarchy positions and funding risks, revealing systemic vulnerabilities that affect global liquidity across the world. It extends the Minskyan perspective, which highlights that monetary systems are organised in tiers of liabilities requiring settlement at higher levels, with a network approach. This network approach shows how the density and interconnectedness of global banks’ funding relationships determines their ability to settle liabilities and thus their position in the global funding and financial hierarchy. At the lowest level of the settlement hierarchy, a global bank with a larger client network can settle payments internally on its own balance sheet; if net withdrawals occur, at the next level interbank credit with other global banks allows deferred settlement; finally, on the highest level direct or indirect access to the Federal Reserve’s emergency lending enables final settlement. This framework extends existing analyses of offshore US dollar creation—which focus mainly on Federal Reserve liquidity provision—by revealing how access to US dollar funding through client and bank networks determines banks’ positions in the lower tiers of the hierarchy. Empirically, the paper combines network visualisations of cross-border funding relationships, with institutional analysis of infrastructures, business models, and regulation, revealing a highly asymmetric global funding network. US banks benefit from integrated onshore–offshore positions and central roles in infrastructures, while the international operations of a few non-US banks rely on branches’ wholesale funding, FX swaps from US banks, and offshore liabilities, showing that global banking hierarchies are shaped by patterns of daily operations, financial ties, and institutional arrangements developed over time, rather than by size, or policy alone.
+    '
+  path: research.html
+- title: An Investigation into the Barriers to Local Currency Lending by Multilateral
+    Development Banks
+  date: '2020-12-31'
+  label: Working Papers
+  subtitle: 'In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi, Karina
+    Patricio Ferreira Lima.'
+  image: images/Research/publications/MDB.jpg
+  description: 'A key manifestation of international financial subordination - and
+    macro-financial constraint on development - is the need of developing countries
+    to issue foreign currency debt. Indeed, the literature on “original sin” has widely
+    discussed the negative implications of foreign currency debt, including external
+    vulnerability, the risk of financial crisis, and structural constraints on balance
+    of payments. Though some larger emerging economies have managed to issue local
+    currency debt, the often-large share of non-resident investors in this debt has
+    created new vulnerabilities, such as heightened vulnerability to the global financial
+    cycle and large exchange rate movements independent of domestic economic conditions
+    (original sin redux). These vulnerabilities put the spotlight on the need for
+    long-term, development-oriented providers of foreign financial resources to break
+    that cycle and provide stable, local currency lending to countries in the Global
+    South. As of yet though Development Finance Institutions do very little of that
+    and remain stuck in the Bretton Woods era of dollar financing. This paper investigates
+    the barriers to scaling up local currency financing by Multilateral Development
+    Banks. Drawing on an extensive mixed-method study of MDB lending which combines
+    semi-structured interviews and a survey with MDB representatives, it puts a spotlight
+    particularly on the institutional, regulatory and cultural barriers which hinder
+    MDBs to break out of dollar dominance and terminate the vicious cycle of foreign
+    currency borrowing and IFS.
 
-- title: "Enabling Public Development Banks to scale up local currency financing"
-  date: "2020-12-31"
-  subtitle: "In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi, Karina Patricio Ferreira Lima."
-  image: "images/Research/publications/UDB.png"
+    '
+  path: research.html
+- title: Causal Effects of Mutual Funds' Flows on Exchange Rates
+  date: '2020-12-31'
+  label: Working Papers
+  subtitle: 'In preparation - Co-author: Karsten Kohler.'
+  image: images/Research/publications/GIV.png
+  description: 'This paper identifies the causal effect of mutual fund flows on exchange
+    rate dynamics in emerging markets by combining a granular instrumental variables
+    (GIV) approach with a local projections framework. Utilizing high-frequency, security-level
+    data from SEC Form N-PORT, we exploit the concentrated structure of the asset
+    management industry to construct an instrument for capital flows based on the
+    idiosyncratic shocks of large, systemic investment funds. This strategy isolates
+    supply-side shifts in the behavior of non-bank financial institutions from domestic
+    demand-side factors, providing a robust identification of the transmission of
+    financial shocks. Our results indicate that exogenous inflows from these institutions
+    lead to a significant and persistent appreciation of the local currency. The identification
+    remains robust under an extensive suite of fund-level and country-level controls,
+    ensuring that the estimated effects are not driven by global financial conditions,
+    risk sentiment, or common shocks to international portfolio allocations. By documenting
+    how the portfolio reallocations of a small number of granular non-bank actors
+    drive currency fluctuations, the study highlights the role of market-based intermediation
+    in reinforcing the cyclical and hierarchical features of the international monetary
+    system. The findings suggest that the institutional structure of global finance
+    is a first-order determinant of exchange rate volatility and external vulnerability
+    in developing economies.
 
-  description: |
-      Exposure to foreign currency financing can create financial fragility in developing countries, since depreciations increase debt burdens. This exposes nations to significant exchange rate (FX) risk, increasing the volatility and cost of foreign financial flows while undermining long-term stability. While public development banks (PDBs) are key in providing local currency alternatives, they are often constrained by the same global monetary structures and high domestic interest rates that limit their lending capacity. Unlike commercial banks, PDBs depend on external financing, which becomes prohibitively expensive in high-interest environments and undermines their ability to provide affordable domestic loans. To circumvent this, PDBs often use international concessional financing, yet this exposes them to the very FX risks that constrain their local currency operations and necessitate strategies for mitigation. The paper develops an institutional case study of the Uganda Development Bank (UDB), based on applied analysis and incubation work led through the FiCS Lab in close collaboration with UDB, the Bank of Uganda, development finance institutions, policymakers, and the FiCS FX Working Group. The analysis draws on UDB's balance-sheet structure, lending operations, and Climate Finance Facility pipeline, focusing on how the bank uses foreign-currency credit lines to finance local-currency climate lending. The paper uses FX modelling, stress-testing, and option-pricing techniques, together with legal, operational, and stakeholder engagement work, to assess alternative instrument designs developed during the FiCS incubation process. The paper proposes an innovative currency risk-sharing scheme to enable the UDB to scale local currency finance while managing its currently unhedged FX exposure by distributing FX risk across UDB, a hedge provider, and a tail-risk guarantor. Because conventional hedging through currency swaps is too costly, UDB presently bears the full FX risk of its foreign currency liabilities.  The proposed scheme introduces a middle-ground solution by partially hedging this exposure and protecting UDB against large, unexpected depreciations of the Ugandan shilling through a tail-risk FX guarantee. FX risk below a specified threshold remains with UDB, while any appreciation beyond the threshold is transferred to the guarantor. The instrument is more affordable for UDB than full hedging and, on average, is profitable for the guarantor. By capping severe FX losses, the scheme stabilises UDB's capital position and supports the sustainable provision of local currency climate finance. The guarantee may be provided by an external donor or multilateral financial institution. Please see the instrument mechanism below.
+    '
+  path: research.html
+- title: Global Banks and Offshore US Dollar Funding
+  date: '2020-12-31'
+  label: Working Papers
+  subtitle: 'In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi.'
+  image: images/Research/publications/network.png
+  description: 'This paper examines hierarchical funding fragilities in global banking
+    through a balance-sheet framework of layered international settlements to show
+    how funding relationship structures determine banks’ hierarchy positions and funding
+    risks, revealing systemic vulnerabilities that affect global liquidity across
+    the world. It extends the Minskyan perspective, which highlights that monetary
+    systems are organised in tiers of liabilities requiring settlement at higher levels,
+    with a network approach. This network approach shows how the density and interconnectedness
+    of global banks’ funding relationships determines their ability to settle liabilities
+    and thus their position in the global funding and financial hierarchy. At the
+    lowest level of the settlement hierarchy, a global bank with a larger client network
+    can settle payments internally on its own balance sheet; if net withdrawals occur,
+    at the next level interbank credit with other global banks allows deferred settlement;
+    finally, on the highest level direct or indirect access to the Federal Reserve’s
+    emergency lending enables final settlement. This framework extends existing analyses
+    of offshore US dollar creation—which focus mainly on Federal Reserve liquidity
+    provision—by revealing how access to US dollar funding through client and bank
+    networks determines banks’ positions in the lower tiers of the hierarchy. Empirically,
+    the paper combines network visualisations of cross-border funding relationships,
+    with institutional analysis of infrastructures, business models, and regulation,
+    revealing a highly asymmetric global funding network. US banks benefit from integrated
+    onshore–offshore positions and central roles in infrastructures, while the international
+    operations of a few non-US banks rely on branches’ wholesale funding, FX swaps
+    from US banks, and offshore liabilities, showing that global banking hierarchies
+    are shaped by patterns of daily operations, financial ties, and institutional
+    arrangements developed over time, rather than by size, or policy alone.
+
+    '
+  path: research.html
+- title: Enabling Public Development Banks to scale up local currency financing
+  date: '2020-12-31'
+  label: Working Papers
+  subtitle: 'In preparation - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi, Karina
+    Patricio Ferreira Lima.'
+  image: images/Research/publications/UDB.png
+  description: 'Exposure to foreign currency financing can create financial fragility
+    in developing countries, since depreciations increase debt burdens. This exposes
+    nations to significant exchange rate (FX) risk, increasing the volatility and
+    cost of foreign financial flows while undermining long-term stability. While public
+    development banks (PDBs) are key in providing local currency alternatives, they
+    are often constrained by the same global monetary structures and high domestic
+    interest rates that limit their lending capacity. Unlike commercial banks, PDBs
+    depend on external financing, which becomes prohibitively expensive in high-interest
+    environments and undermines their ability to provide affordable domestic loans.
+    To circumvent this, PDBs often use international concessional financing, yet this
+    exposes them to the very FX risks that constrain their local currency operations
+    and necessitate strategies for mitigation. The paper develops an institutional
+    case study of the Uganda Development Bank (UDB), based on applied analysis and
+    incubation work led through the FiCS Lab in close collaboration with UDB, the
+    Bank of Uganda, development finance institutions, policymakers, and the FiCS FX
+    Working Group. The analysis draws on UDB''s balance-sheet structure, lending operations,
+    and Climate Finance Facility pipeline, focusing on how the bank uses foreign-currency
+    credit lines to finance local-currency climate lending. The paper uses FX modelling,
+    stress-testing, and option-pricing techniques, together with legal, operational,
+    and stakeholder engagement work, to assess alternative instrument designs developed
+    during the FiCS incubation process. The paper proposes an innovative currency
+    risk-sharing scheme to enable the UDB to scale local currency finance while managing
+    its currently unhedged FX exposure by distributing FX risk across UDB, a hedge
+    provider, and a tail-risk guarantor. Because conventional hedging through currency
+    swaps is too costly, UDB presently bears the full FX risk of its foreign currency
+    liabilities.  The proposed scheme introduces a middle-ground solution by partially
+    hedging this exposure and protecting UDB against large, unexpected depreciations
+    of the Ugandan shilling through a tail-risk FX guarantee. FX risk below a specified
+    threshold remains with UDB, while any appreciation beyond the threshold is transferred
+    to the guarantor. The instrument is more affordable for UDB than full hedging
+    and, on average, is profitable for the guarantor. By capping severe FX losses,
+    the scheme stabilises UDB''s capital position and supports the sustainable provision
+    of local currency climate finance. The guarantee may be provided by an external
+    donor or multilateral financial institution. Please see the instrument mechanism
+    below.
+
+    '
+  path: research.html

@@ -10,6 +10,8 @@
     "Publications": "Publicaciones",
     "Working Papers": "Documentos de Trabajo",
     "Policy & Other": "Otros",
+    "WP": "DT",
+    "Policy": "Política",
     "Education": "Educación",
     "Daily Global Financial Cycle proxy": "Proxy diario del Ciclo Financiero Global",
     "Covered Interest Parity deviations in CHF-USD": "Desviaciones de la Paridad de Tasas de Interés Cubierta en CHF-USD",
@@ -27,13 +29,32 @@
   delete dictionary["Buenas!"];
 
   let currentLang = localStorage.getItem('site_lang') || 'en';
+  function updateListingDates(lang) {
+    const locale = lang === 'es' ? 'es-ES' : 'en-US';
+    const options = lang === 'es'
+      ? { day: 'numeric', month: 'short', year: 'numeric' }
+      : { month: 'short', day: 'numeric', year: 'numeric' };
+
+    document.querySelectorAll('.quarto-post').forEach(post => {
+      const timestamp = Number(post.dataset.listingDateSort);
+      const dateEl = post.querySelector('.listing-date');
+      if (!Number.isFinite(timestamp) || !dateEl) return;
+
+      const parts = new Intl.DateTimeFormat(locale, options).formatToParts(new Date(timestamp));
+      const value = type => parts.find(part => part.type === type)?.value || '';
+      const month = value('month').replace('.', '');
+      dateEl.textContent = lang === 'es'
+        ? `${value('day')} ${month.charAt(0).toUpperCase()}${month.slice(1)}, ${value('year')}`
+        : `${month} ${value('day')}, ${value('year')}`;
+    });
+  }
 
   function applyLanguage(lang) {
     const isEs = lang === 'es';
     const dict = isEs ? dictionary : reverseDictionary;
 
     const elementsToTranslate = document.querySelectorAll(
-      '.navbar, .nav-tabs, h1, h2, h3, h4, .photo-overlay, .chart-card'
+      '.navbar, .nav-tabs, h1, h2, h3, h4, .photo-overlay, .chart-card, .listing-label'
     );
 
     elementsToTranslate.forEach(el => {
@@ -63,6 +84,7 @@
 
     document.documentElement.lang = lang;
     localStorage.setItem('site_lang', lang);
+    updateListingDates(lang);
     
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: lang }));
   }
@@ -122,6 +144,7 @@
     } else {
       document.querySelectorAll('.lang-es').forEach(el => el.style.display = 'none');
       document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+      updateListingDates('en');
     }
   });
 })();

@@ -1,5 +1,6 @@
 project:
   type: website
+  pre-render: "python research_files/auto_update_data.py"
 
 website:
   title: "Iván Weigandi"
@@ -39,7 +40,7 @@ format:
     include-after-body:
       - text: |
           <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-          <script src="language-switcher.js"></script>
+          <script src="/language-switcher.js"></script>
 
 
 

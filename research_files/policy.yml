@@ -1,139 +1,189 @@
-- title: "Fuel price shock: what policy responses reveal about resilience"
-  subtitle: "ODI Insights, June 2026"
-  date: "2026-06-18"
-  image: "images/Research/other/fuel_price.png"
-  description: |
-    
-    [Link](https://odi.org/en/insights/fuel-price-shock-what-policy-responses-reveal-about-resilience/){.btn .btn-outline-primary .btn-sm}
+- title: 'Fuel price shock: what policy responses reveal about resilience'
+  subtitle: ODI Insights, June 2026
+  date: '2026-06-18'
+  label: Policy & Other
+  image: images/Research/other/fuel_price.png
+  description: '
 
-- title: "Don't you (forget about me): global bank lending to EMDEs is in retreat"
-  subtitle: "ODI Insights, May 2026"
-  date: "2026-05-14"
-  image: "images/Research/other/global_bank.png"
-  description: |
-    
-    [Link](https://odi.org/en/insights/dont-you-forget-about-me-global-bank-lending-to-emdes-is-in-retreat/){.btn .btn-outline-primary .btn-sm}
+    [Link](https://odi.org/en/insights/fuel-price-shock-what-policy-responses-reveal-about-resilience/){.btn
+    .btn-outline-primary .btn-sm}
 
-- title: "The global financial safety net could become more asymmetric amid geoeconomic fragmentation"
-  subtitle: "ODI Insights, April 2026"
-  date: "2026-04-30"
-  image: "images/Research/other/safety_net.png"
-  description: |
-    
-    [Link](https://odi.org/en/insights/the-global-financial-safety-net-could-become-more-asymmetric-amid-geoeconomic-fragmentation/){.btn .btn-outline-primary .btn-sm}
+    '
+  path: research.html
+- title: 'Don''t you (forget about me): global bank lending to EMDEs is in retreat'
+  subtitle: ODI Insights, May 2026
+  date: '2026-05-14'
+  label: Policy & Other
+  image: images/Research/other/global_bank.png
+  description: '
 
-- title: "IMF Spring Meetings: global growth slowdown may signal divergent and asymmetric effects in emerging markets"
-  subtitle: "ODI Insights, April 2026"
-  date: "2026-04-16"
-  image: "images/Research/other/imf_spring.png"
-  description: |
-    
-    [Link](https://odi.org/en/insights/imf-spring-meetings-a-global-growth-slowdown-may-mask-deeper-emerging-market-pressures/){.btn .btn-outline-primary .btn-sm}
+    [Link](https://odi.org/en/insights/dont-you-forget-about-me-global-bank-lending-to-emdes-is-in-retreat/){.btn
+    .btn-outline-primary .btn-sm}
 
-- title: "Reserves, rates and risks: all eyes on EMDE currency policy"
-  subtitle: "ODI Insights, April 2026"
-  date: "2026-04-09"
-  image: "images/Research/other/reserves_rates.jpg"
-  description: |
-    
-    [Link](https://odi.org/en/insights/reserves-rates-and-risks-all-eyes-on-emde-currency-policy/){.btn .btn-outline-primary .btn-sm}
+    '
+  path: research.html
+- title: The global financial safety net could become more asymmetric amid geoeconomic
+    fragmentation
+  subtitle: ODI Insights, April 2026
+  date: '2026-04-30'
+  label: Policy & Other
+  image: images/Research/other/safety_net.png
+  description: '
 
-- title: "Navigating commodity shocks: the heterogeneous impact on EMDEs"
-  subtitle: "ODI Insights, March 2026"
-  date: "2026-03-26"
-  image: "images/Research/other/commodity_shocks.png"
-  description: |
-    
-    [Link](https://odi.org/en/insights/navigating-commodity-shocks-the-heterogeneous-impact-on-emdes/){.btn .btn-outline-primary .btn-sm}
+    [Link](https://odi.org/en/insights/the-global-financial-safety-net-could-become-more-asymmetric-amid-geoeconomic-fragmentation/){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: 'IMF Spring Meetings: global growth slowdown may signal divergent and asymmetric
+    effects in emerging markets'
+  subtitle: ODI Insights, April 2026
+  date: '2026-04-16'
+  label: Policy & Other
+  image: images/Research/other/imf_spring.png
+  description: '
+
+    [Link](https://odi.org/en/insights/imf-spring-meetings-a-global-growth-slowdown-may-mask-deeper-emerging-market-pressures/){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: 'Reserves, rates and risks: all eyes on EMDE currency policy'
+  subtitle: ODI Insights, April 2026
+  date: '2026-04-09'
+  label: Policy & Other
+  image: images/Research/other/reserves_rates.jpg
+  description: '
+
+    [Link](https://odi.org/en/insights/reserves-rates-and-risks-all-eyes-on-emde-currency-policy/){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: 'Navigating commodity shocks: the heterogeneous impact on EMDEs'
+  subtitle: ODI Insights, March 2026
+  date: '2026-03-26'
+  label: Policy & Other
+  image: images/Research/other/commodity_shocks.png
+  description: '
+
+    [Link](https://odi.org/en/insights/navigating-commodity-shocks-the-heterogeneous-impact-on-emdes/){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: Turbulência no mercado monetário dos EUA
+  subtitle: 'RETROSPECTIVA DO Sistema Financeiro 2024. UFRJ, June 2025 - Co-author:
+    Gabriel Porto.'
+  date: '2025-06-01'
+  label: Policy & Other
+  image: images/Research/other/porto2025.JPG
+  description: '
+
+    [Link](http://dx.doi.org/10.13140/RG.2.2.30387.75049){.btn .btn-outline-primary
+    .btn-sm}
+
+    '
+  path: research.html
+- title: 'How Multilateral Development Banks’ Local Currency Lending Can Reduce the
+    Debt Burden in the Global South - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi.'
+  subtitle: Positive Money UK, March 2025
+  date: '2025-03-01'
+  label: Policy & Other
+  image: images/Research/other/pos_money2025.JPG
+  description: '
+
+    [Link](https://positivemoney.org/uk-global/update/how-multilateral-development-banks-local-currency-lending-can-reduce-the-debt-bur/){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: 'Critically Assessing the Development Potential of Local Currency Bond Markets
+    in Africa - Co-authors: Florence Dafe, Annina Kaltenbrunner, Ingrid Harvold Kvangraven.'
+  subtitle: Making Finance Work for Africa, May 2024
+  date: '2024-05-01'
+  label: Policy & Other
+  image: images/Research/other/mfw4a.jfif
+  description: ''
+  path: research.html
+- title: 'Review of ''Money and Empire: Charles P. Kindleberger and the Dollar System''
+    by Perry Mehrling'
+  subtitle: Economic Issues, Vol. 27, Part 2, 2022, pp. 105-10
+  date: '2022-09-01'
+  label: Policy & Other
+  image: images/Research/other/mehrling.jfif
+  description: "\n[Link](https://www.economicissues.org.uk/Files/2022/EI_Sept2022_reviews.pdf){.btn\
+    \ .btn-outline-primary .btn-sm}\n\n \n  [Link](https://mfw4a.org/blog/critically-assessing-development-potential-local-currency-bond-markets-africa){.btn\
+    \ .btn-outline-primary .btn-sm}\n"
+  path: research.html
+- title: La posibilidad de distribuir dividendos en 2022 no tendrá impacto en las
+    entidades financieras
+  subtitle: Moody’s Local Argentina, December 2021
+  date: '2021-12-17'
+  label: Policy & Other
+  image: images/Research/other/dividendos.JPG
+  description: '
 
 
-- title: "Turbulência no mercado monetário dos EUA"
-  subtitle: "RETROSPECTIVA DO Sistema Financeiro 2024. UFRJ, June 2025 - Co-author: Gabriel Porto."
-  date: "2025-06-01"
-  image: "images/Research/other/porto2025.JPG"
-  description: |
-     
-      [Link](http://dx.doi.org/10.13140/RG.2.2.30387.75049){.btn .btn-outline-primary .btn-sm}
+    [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-12-17/d3a5d94a-190a-4aa1-a7d2-e9bb51f4bde5/file){.btn
+    .btn-outline-primary .btn-sm}
 
-- title: "How Multilateral Development Banks’ Local Currency Lending Can Reduce the Debt Burden in the Global South - Co-authors: Annina Kaltenbrunner, Bruno Bonizzi."
-  subtitle: "Positive Money UK, March 2025"
-  date: "2025-03-01"
+    '
+  path: research.html
+- title: Aumento de la exposición bancaria al sector público
+  subtitle: Moody’s Local Argentina, November 2021
+  date: '2021-11-11'
+  label: Policy & Other
+  image: images/Research/other/doom_loop.JPG
+  description: '[Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-11-11/718fd30a-1501-48df-a0fb-77cf27b1e09a/file){.btn
+    .btn-outline-primary .btn-sm}
 
-  image: "images/Research/other/pos_money2025.JPG"
-  description: |
-    
-    [Link](https://positivemoney.org/uk-global/update/how-multilateral-development-banks-local-currency-lending-can-reduce-the-debt-bur/){.btn .btn-outline-primary .btn-sm}
+    '
+  path: research.html
+- title: Elevados niveles de capitalización, liquidez y cobertura respaldan la perspectiva
+    de los bancos en 2021
+  subtitle: Moody’s Local Argentina, May 2021
+  date: '2021-05-31'
+  label: Policy & Other
+  image: images/Research/other/capitalizacion.JPG
+  description: '[Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-31/41ca1963-e7a2-43ae-81ae-b7e4d189db88/file){.btn
+    .btn-outline-primary .btn-sm}
 
-- title: "Critically Assessing the Development Potential of Local Currency Bond Markets in Africa - Co-authors: Florence Dafe, Annina Kaltenbrunner, Ingrid Harvold Kvangraven."
-  subtitle: "Making Finance Work for Africa, May 2024"
-  date: "2024-05-01"
+    '
+  path: research.html
+- title: La posibilidad de integrar como efectivo mínimo bonos del Tesoro no tendría
+    impacto en la calidad de crédito
+  subtitle: Moody’s Local Argentina, May 2021
+  date: '2021-05-28'
+  label: Policy & Other
+  image: images/Research/other/int_min.JPG
+  description: '
 
-  image: "images/Research/other/mfw4a.jfif"
-  description: |
 
-- title: "Review of 'Money and Empire: Charles P. Kindleberger and the Dollar System' by Perry Mehrling"
-  subtitle: "Economic Issues, Vol. 27, Part 2, 2022, pp. 105-10"
-  date: "2022-09-01"
-  image: "images/Research/other/mehrling.jfif"
-  description: |
-    
-    [Link](https://www.economicissues.org.uk/Files/2022/EI_Sept2022_reviews.pdf){.btn .btn-outline-primary .btn-sm}
+    [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-28/8d8da5fa-06f1-40e3-bbb6-82b5b3450ab3/file){.btn
+    .btn-outline-primary .btn-sm}
 
-     
-      [Link](https://mfw4a.org/blog/critically-assessing-development-potential-local-currency-bond-markets-africa){.btn .btn-outline-primary .btn-sm}
-- title: "La posibilidad de distribuir dividendos en 2022 no tendrá impacto en las entidades financieras"
-  subtitle: "Moody’s Local Argentina, December 2021"
-  date: "2021-12-17"
-  image: "images/Research/other/dividendos.JPG"
-
-  description: |
-    
-    
-    [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-12-17/d3a5d94a-190a-4aa1-a7d2-e9bb51f4bde5/file){.btn .btn-outline-primary .btn-sm}
-
-- title: "Aumento de la exposición bancaria al sector público"
-  subtitle: "Moody’s Local Argentina, November 2021"
-  date: "2021-11-11"
-  image: "images/Research/other/doom_loop.JPG"
-  description: |
-     [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-11-11/718fd30a-1501-48df-a0fb-77cf27b1e09a/file){.btn .btn-outline-primary .btn-sm}
-
-- title: "Elevados niveles de capitalización, liquidez y cobertura respaldan la perspectiva de los bancos en 2021"
-  subtitle: "Moody’s Local Argentina, May 2021"
-  date: "2021-05-31"
-  image: "images/Research/other/capitalizacion.JPG"
-  description: |
-    [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-31/41ca1963-e7a2-43ae-81ae-b7e4d189db88/file){.btn .btn-outline-primary .btn-sm}
-
-- title: "La posibilidad de integrar como efectivo mínimo bonos del Tesoro no tendría impacto en la calidad de crédito"
-  subtitle: "Moody’s Local Argentina, May 2021"
-  date: "2021-05-28"
-  image: "images/Research/other/int_min.JPG"
-  description: |
-
-    
-    [Read Report](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-28/8d8da5fa-06f1-40e3-bbb6-82b5b3450ab3/file){.btn .btn-outline-primary .btn-sm}
-
-- title: "Credit Perspectives for Argentina (Financial Institutions & Structured Finance)"
-  subtitle: "Moody’s Local Argentina, Sector Comments (Annual Outlooks 2021-2022)"
-  date: "2020"
-  image: "images/Research/other/pers_ban.JPG"
-  description: |
-    
-    
-    **Structured Finance:** [2021 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2020-11-10/25fd357e-cf1b-440d-91d9-a5b26fa12d77/file){.btn .btn-outline-primary .btn-sm} 
-                            [2022 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-12-15/9bf71184-2bdd-44b2-88f9-7e7140c26733/file){.btn .btn-outline-primary .btn-sm}
-    
-    **Financial Institutions:** [2021 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-1-12/d9f1493d-f43a-4cdc-9e52-979c29a73a0a/file){.btn .btn-outline-primary .btn-sm} 
-                                [2022 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2022-2-15/78974f56-77ca-4032-ba2b-0ad47c8762f9/file){.btn .btn-outline-primary .btn-sm}
-
-- title: "Securitisation Quarterly Monitor"
-  subtitle: "Moody’s Local Argentina, 2021-2022"
-  date: "2020"
-  image: "images/Research/other/sec_mon.JPG"
-  description: |
-  
-    [1Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-12/d15caaa7-77eb-4452-b316-8c53d9ee2dbe/file){.btn .btn-outline-primary .btn-sm}
-    [2Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-7-27/aa0bfc91-d3fc-41eb-8665-4296fb01f2af/file){.btn .btn-outline-primary .btn-sm} 
-    [3Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-11-2/ff00d551-2c96-46bb-b5a4-c81aa3417534/file){.btn .btn-outline-primary .btn-sm} 
-    [4Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2022-1-26/4c1a4c23-d758-4fca-9a9e-8ef01ebd84d2/file){.btn .btn-outline-primary .btn-sm}
+    '
+  path: research.html
+- title: Credit Perspectives for Argentina (Financial Institutions & Structured Finance)
+  subtitle: Moody’s Local Argentina, Sector Comments (Annual Outlooks 2021-2022)
+  date: '2020'
+  label: Policy & Other
+  image: images/Research/other/pers_ban.JPG
+  description: "\n\n**Structured Finance:** [2021 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2020-11-10/25fd357e-cf1b-440d-91d9-a5b26fa12d77/file){.btn\
+    \ .btn-outline-primary .btn-sm} \n                        [2022 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-12-15/9bf71184-2bdd-44b2-88f9-7e7140c26733/file){.btn\
+    \ .btn-outline-primary .btn-sm}\n\n**Financial Institutions:** [2021 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-1-12/d9f1493d-f43a-4cdc-9e52-979c29a73a0a/file){.btn\
+    \ .btn-outline-primary .btn-sm} \n                            [2022 Outlook](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2022-2-15/78974f56-77ca-4032-ba2b-0ad47c8762f9/file){.btn\
+    \ .btn-outline-primary .btn-sm}\n"
+  path: research.html
+- title: Securitisation Quarterly Monitor
+  subtitle: Moody’s Local Argentina, 2021-2022
+  date: '2020'
+  label: Policy & Other
+  image: images/Research/other/sec_mon.JPG
+  description: "\n[1Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-5-12/d15caaa7-77eb-4452-b316-8c53d9ee2dbe/file){.btn\
+    \ .btn-outline-primary .btn-sm}\n[2Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-7-27/aa0bfc91-d3fc-41eb-8665-4296fb01f2af/file){.btn\
+    \ .btn-outline-primary .btn-sm} \n[3Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2021-11-2/ff00d551-2c96-46bb-b5a4-c81aa3417534/file){.btn\
+    \ .btn-outline-primary .btn-sm} \n[4Q-2021](https://moodyslocal.com.ar/wp-content/uploads/LMRR_AR/RESEARCH/2022-1-26/4c1a4c23-d758-4fca-9a9e-8ef01ebd84d2/file){.btn\
+    \ .btn-outline-primary .btn-sm}\n"
+  path: research.html

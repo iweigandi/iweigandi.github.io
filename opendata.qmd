@@ -108,6 +108,7 @@ fx_survey = survey_uip_points(fx_panel, fx_bcb, fx_ecb)
 ::: {.open-data-page .open-data-compact}
 ::: {.chart-grid}
 ::: {.chart-card .chart-card-main}
+<!-- date: 2026-02-28 -->
 ::: {.lang-en}
 #### Daily Global Financial Cycle proxy
 
@@ -145,6 +146,7 @@ fig.show(config={"displayModeBar": False, "responsive": True})
 :::
 
 ::: {.chart-card}
+<!-- date: 2026-02-15 -->
 ::: {.lang-en}
 #### Covered Interest Parity deviations in CHF-USD 
 
@@ -188,6 +190,7 @@ fig.show(config={"displayModeBar": False, "responsive": True})
 :::
 
 ::: {.chart-card}
+<!-- date: 2026-01-20 -->
 ::: {.lang-en}
 #### G-SIBs' market leverage
 
@@ -236,6 +239,7 @@ fig.show(config={"displayModeBar": False, "responsive": True})
 :::
 
 ::: {.chart-card}
+<!-- date: 2026-01-05 -->
 ::: {.lang-en}
 #### FX dealer positions and UIP outcomes
 

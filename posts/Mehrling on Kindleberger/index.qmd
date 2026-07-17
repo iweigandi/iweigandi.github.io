@@ -2,7 +2,8 @@
 title: "The 'Global Money View': Perry Mehrling's reading of Charles P. Kindleberger"
 subtitle: "Some appreciations on Money and Empire: Charles P. Kindleberger and the Dollar System"
 author: "Iván Weigandi"
-date: "2026-11-01"
+date: "2022-11-16"
+label: "Blog"
 categories: [Book review, Global money]
 image: "mehrling.jpg"
 ---

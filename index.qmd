@@ -4,6 +4,22 @@ page-layout: full
 format:
   html:
     page-layout: full
+listing:
+  - id: latest-news
+    contents:
+      - research_files/journals.yml
+      - research_files/working_papers.yml
+      - research_files/policy.yml
+      - research_files/data.yml
+      - posts
+    sort: "date desc"
+    type: default
+    max-items: 3
+    image-align: left
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [date, label, title]
 ---
 
 ::: {.home-hero}
@@ -26,33 +42,150 @@ Previously, I worked as a Credit Analyst at Moody's Local Argentina (2019–2022
 ::: {.lang-es}
 Soy un economista argentino interesado en macrofinanzas internacionales y macroeconomía, riesgo crediticio y políticas públicas. Actualmente soy Investigador en Macroeconomía, Financiamiento y Shocks Globales dentro del Grupo de Desarrollo Económico Internacional en [ODI Global](https://odi.org/en/profile/ivan-weigandi/).
 
-Formo parte del grupo Local Currency for Development, donde he participado en proyectos como ["Enhancing MDB Capacity through Local Currency Lending"](https://business.leeds.ac.uk/dir-record/research-projects/2292/enhancing-mdb-capacity-through-local-currency-lending) y ["Currency Risk-Sharing Scheme for Scaling up Local-Currency Climate Finance in Uganda"](https://business.leeds.ac.uk/dir-record/research-projects/2516/currency-risk-sharing-facility-for-scaling-up-local-currency-climate-finance-in-uganda), a través de roles de investigación en la Universidad de Leeds y City St George's, Universidad de Londres.
+Formo parte del grupo Local Currency for Development, donde participé en proyectos como ["Enhancing MDB Capacity through Local Currency Lending"](https://business.leeds.ac.uk/dir-record/research-projects/2292/enhancing-mdb-capacity-through-local-currency-lending) y ["Currency Risk-Sharing Scheme for Scaling up Local-Currency Climate Finance in Uganda"](https://business.leeds.ac.uk/dir-record/research-projects/2516/currency-risk-sharing-facility-for-scaling-up-local-currency-climate-finance-in-uganda), a través de roles de investigación en la Universidad de Leeds y City St George's, Universidad de Londres.
 
-Anteriormente, trabajé como Analista de Crédito en Moody's Local Argentina (2019–2022), cubriendo bancos, transacciones de finanzas estructuradas y compañías de seguros. Antes de eso, fui analista en la gerencia de Estudios y Estadísticas de la Superintendencia de Seguros de la Nación (2013–2019). También cuento con varios años de experiencia como consultor económico independiente, y soy coordinador en el Grupo de Trabajo de Estabilidad Financiera de YSI.
+Anteriormente, trabajé como Analista de Crédito en Moody's Local Argentina (2019–2022), cubriendo bancos, finanzas estructuradas y aseguradoras. Antes de eso, fui analista en la gerencia de Estudios y Estadísticas de la Superintendencia de Seguros de la Nación (2013–2019). También cuento con varios años de experiencia como consultor económico independiente, y soy coordinador en el Grupo de Trabajo de Estabilidad Financiera de YSI.
 :::
 
 ## Education
 
 ::: {.lang-en}
-[**University of Leeds**](https://business.leeds.ac.uk/pgr/1367/ivan-weigandi){.edu-link} - UK  
-PhD in Economics - 2026  
+[PhD in Economics - University of Leeds](https://business.leeds.ac.uk/pgr/1367/ivan-weigandi){.edu-link} - UK - 2026
 
-**Universidad Nacional de General San Martín** - Argentina  <br>
-Master's in Economic Development (Macroeconomics & Development Financing) - 2021
+Master's in Economic Development (Macroeconomics & Development Financing) - Universidad Nacional de General San Martín - Argentina - 2021
 
-**Universidad de Buenos Aires** - Argentina  
-B.A. in Economics - 2018
+B.A. in Economics - Universidad de Buenos Aires - Argentina - 2018
 :::
 ::: {.lang-es}
-[**Universidad de Leeds**](https://business.leeds.ac.uk/pgr/1367/ivan-weigandi){.edu-link} - Reino Unido  
-Doctorado en Economía - 2026  
+[Doctorado en Economía - Universidad de Leeds](https://business.leeds.ac.uk/pgr/1367/ivan-weigandi){.edu-link} - Reino Unido - 2026
 
-**Universidad Nacional de General San Martín** - Argentina  <br>
-Maestría en Desarrollo Económico (Macroeconomía y Financiamiento del Desarrollo) - 2021
+Maestría en Desarrollo Económico (Macroeconomía y Financiamiento del Desarrollo) - Universidad Nacional de General San Martín - Argentina - 2021
 
-**Universidad de Buenos Aires** - Argentina  
-Licenciatura en Economía - 2018
+Licenciatura en Economía - Universidad de Buenos Aires - Argentina - 2018
 :::
+
+
+::: {.lang-en}
+## News
+:::
+::: {.lang-es}
+## Novedades
+:::
+
+::: {#latest-news}
+:::
+
+<style>
+/* Hide header anchor icons */
+h2 .header-anchor,
+h2 .anchorjs-link,
+h3 .anchorjs-link {
+  display: none !important;
+}
+
+#listing-latest-news,
+#listing-latest-news .quarto-listing-container-default {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#listing-latest-news .list {
+  display: table !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#listing-latest-news .quarto-post {
+  display: table-row !important;
+  background-color: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+#listing-latest-news .body,
+#listing-latest-news .metadata {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  padding: 0.15rem 0 !important;
+  border-top: 1px solid var(--rule) !important;
+}
+
+#listing-latest-news .quarto-post:first-child .body,
+#listing-latest-news .quarto-post:first-child .metadata {
+  border-top: none !important;
+}
+
+#listing-latest-news .quarto-post:hover .body,
+#listing-latest-news .quarto-post:hover .metadata {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#listing-latest-news .body {
+  width: 100% !important;
+  max-width: 1px !important; /* Critical for ellipsis in table-cell */
+}
+
+#listing-latest-news .listing-title,
+#listing-latest-news .listing-title a {
+  font-size: var(--bio-font-size) !important;
+  line-height: 1.2 !important;
+  font-weight: normal !important;
+  margin-bottom: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  color: inherit;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+#listing-latest-news .metadata {
+  width: 1% !important; /* Forces it to shrink-wrap perfectly */
+  white-space: nowrap !important;
+  padding-left: 1.5rem !important; /* Replaces the flex gap */
+}
+
+#listing-latest-news .metadata a {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.5rem !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+#listing-latest-news .listing-label {
+  order: -1 !important; /* Move label to the left of the date */
+  font-size: var(--bio-font-size) !important;
+  color: var(--blue) !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  width: auto !important; /* Now safe to be auto! */
+  white-space: nowrap !important;
+  text-align: left !important;
+}
+
+#listing-latest-news .listing-date {
+  width: 85px !important;
+  text-align: right !important;
+  font-size: var(--bio-font-size) !important;
+  color: var(--muted) !important;
+  margin: 0 !important;
+}
+
+#listing-latest-news .listing-subtitle {
+  display: none !important;
+}
+</style>
 
 :::
 :::

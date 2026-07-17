@@ -1,0 +1,19 @@
+- title: "Daily Global Financial Cycle proxy"
+  date: "2026-02-28"
+  path: "opendata.html"
+  label: "Data"
+
+- title: "Covered Interest Parity deviations in CHF-USD"
+  date: "2026-02-15"
+  path: "opendata.html"
+  label: "Data"
+
+- title: "G-SIBs' market leverage"
+  date: "2026-01-20"
+  path: "opendata.html"
+  label: "Data"
+
+- title: "FX dealer positions and UIP outcomes"
+  date: "2026-01-05"
+  path: "opendata.html"
+  label: "Data"

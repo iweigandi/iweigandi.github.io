@@ -1,4 +1,4 @@
-﻿# Quarto output
+# Quarto output
 /_site/
 /.quarto/
 
@@ -24,3 +24,13 @@ temp_*.py
 
 # Local document temp files
 .vdoc.*.tmp
+# Local website review artifacts
+/screenshot*.png
+/styles.orig.css
+/test.py
+/add_paths.py
+/update_labels.py
+/news-fix.css
+/links-fix.css
+/bio-font-size.css
+*.quarto_ipynb
