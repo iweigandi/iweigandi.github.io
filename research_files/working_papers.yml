@@ -96,34 +96,6 @@
 
     '
   path: research.html
-- title: Causal Effects of Mutual Funds' Flows on Exchange Rates
-  draft: true
-  date: '2020-12-31'
-  label: Working Papers
-  subtitle: 'In preparation - Co-author: Karsten Kohler.'
-  image: images/Research/publications/GIV.png
-  description: 'This paper identifies the causal effect of mutual fund flows on exchange
-    rate dynamics in emerging markets by combining a granular instrumental variables
-    (GIV) approach with a local projections framework. Utilizing high-frequency, security-level
-    data from SEC Form N-PORT, we exploit the concentrated structure of the asset
-    management industry to construct an instrument for capital flows based on the
-    idiosyncratic shocks of large, systemic investment funds. This strategy isolates
-    supply-side shifts in the behavior of non-bank financial institutions from domestic
-    demand-side factors, providing a robust identification of the transmission of
-    financial shocks. Our results indicate that exogenous inflows from these institutions
-    lead to a significant and persistent appreciation of the local currency. The identification
-    remains robust under an extensive suite of fund-level and country-level controls,
-    ensuring that the estimated effects are not driven by global financial conditions,
-    risk sentiment, or common shocks to international portfolio allocations. By documenting
-    how the portfolio reallocations of a small number of granular non-bank actors
-    drive currency fluctuations, the study highlights the role of market-based intermediation
-    in reinforcing the cyclical and hierarchical features of the international monetary
-    system. The findings suggest that the institutional structure of global finance
-    is a first-order determinant of exchange rate volatility and external vulnerability
-    in developing economies.
-
-    '
-  path: research.html
 - title: Global Banks and Offshore US Dollar Funding
   date: '2020-12-31'
   label: Working Papers
