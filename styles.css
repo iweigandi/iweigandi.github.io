@@ -211,8 +211,7 @@ main h3 {
   background: rgba(36, 49, 58, 0.45);
   color: white;
   display: flex;
-  align-items: start;
-    align-content: center;
+  align-items: center;
   justify-content: center;
   font-size: 1.4rem;
   font-weight: 500;
@@ -285,8 +284,7 @@ main h3 {
   display: grid;
   grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1fr);
   column-gap: clamp(1.8rem, 5vw, 4rem);
-  align-items: start;
-    align-content: center;
+  align-items: center;
   padding: clamp(0.8rem, 2vw, 1.2rem) 0;
   border-top: 1px solid var(--rule) !important;
   background: transparent !important;
@@ -520,7 +518,7 @@ main h3 {
     height: 100%;
     min-height: 0;
     align-self: stretch;
-    place-items: start end;
+    place-items: center start;
   }
 
   .home-photo-panel p {
@@ -1069,7 +1067,6 @@ main.content li {
   }
 }
 
-
 /* Restore missing bio font size variable for the News listing */
 @media (max-width: 767px) {
   :root {
@@ -1088,7 +1085,6 @@ main.content li {
 }
 
 #listing-latest-news .listing-label { text-transform: none !important; }
-
 
 /* Remove underline from links in bio and education */
 .home-content a {

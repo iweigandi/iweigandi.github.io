@@ -1,0 +1,103 @@
+
+/* Fix for the Latest News section */
+#listing-latest-news .quarto-post {
+  display: grid !important;
+  grid-template-columns: minmax(80px, max-content) minmax(100px, 1fr) max-content !important;
+  gap: 1rem !important;
+  align-items: baseline !important;
+  padding: 0.15rem 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+  width: 100% !important;
+}
+
+#listing-latest-news .body,
+#listing-latest-news .metadata,
+#listing-latest-news .metadata a {
+  display: contents !important;
+}
+
+#listing-latest-news .listing-title,
+#listing-latest-news .listing-title a {
+  grid-column: 2;
+  font-family: inherit !important;
+  font-size: 1rem !important; /* Default fallback */
+  font-weight: inherit !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+#listing-latest-news .listing-label {
+  grid-column: 1;
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  font-weight: inherit !important;
+  text-transform: none !important;
+  text-align: left !important;
+  width: auto !important;
+  color: var(--blue) !important;
+}
+
+#listing-latest-news .listing-date {
+  grid-column: 3;
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  font-weight: inherit !important;
+  text-align: right !important;
+  color: rgba(0,0,0,0.6) !important;
+}
+
+/* Match the bio font sizes exactly based on screen width */
+@media (max-width: 767px) {
+  #listing-latest-news .listing-title,
+  #listing-latest-news .listing-title a,
+  #listing-latest-news .listing-label,
+  #listing-latest-news .listing-date {
+    font-size: clamp(0.86rem, 2vw, 0.98rem) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  #listing-latest-news .listing-title,
+  #listing-latest-news .listing-title a,
+  #listing-latest-news .listing-label,
+  #listing-latest-news .listing-date {
+    font-size: clamp(0.72rem, 1.45vw, 0.84rem) !important;
+  }
+}
+
+@media (min-width: 981px) {
+  #listing-latest-news .listing-title,
+  #listing-latest-news .listing-title a,
+  #listing-latest-news .listing-label,
+  #listing-latest-news .listing-date {
+    font-size: clamp(0.86rem, 0.88vw, 0.92rem) !important;
+  }
+}
+
+/* Restore missing bio font size variable for the News listing */
+@media (max-width: 767px) {
+  :root {
+    --bio-font-size: clamp(0.86rem, 2vw, 0.98rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+  :root {
+    --bio-font-size: clamp(0.72rem, 1.45vw, 0.84rem);
+  }
+}
+@media (min-width: 981px) {
+  :root {
+    --bio-font-size: clamp(0.86rem, 0.88vw, 0.92rem);
+  }
+}
+
+#listing-latest-news .listing-label { text-transform: none !important; }
+
+/* Remove underline from links in bio and education */
+.home-content a {
+  text-decoration: none !important;
+}
+
+.home-content a:hover {
+  text-decoration: underline !important; /* Optional: add it back on hover for usability */
+}
