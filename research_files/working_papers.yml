@@ -1,7 +1,21 @@
-- title: Global Banks’ Leverage and Global Liquidity
-  date: '2026-06-01'
+- title: Commodity Prices and Currency Tail Risk in Developing Countries
+  date: '2026-08-29'
   label: Working Papers
-  subtitle: Under review at the Journal of International Money and Finance
+  subtitle: 'SSRN Working Paper · With Bruno Bonizzi, Annina Kaltenbrunner, Guilherme Klein, Karsten Kohler and Karina Patrício'
+  image: images/Research/publications/commodity_currency_tail_risk.png
+  description: '
+
+    We examine how global commodity price booms and busts shape currency tail risk in low-and middle-income countries. Combining panel quantile regressions with local projections for 78 countries over 1990Q1-2022Q4, we estimate the effect of commodity price cycles on the 95th percentile of the distribution of quarterly depreciations against the US dollar. At the median, commodity booms are associated with currency appreciation, confirming the conventional commodity-currency relationship. However, this relationship reverses at the tail of the distribution, where commodity booms raise the risk of large future depreciations. This predictive effect is unrelated to the share of commodities in exports, and is stronger the larger the share of non-bank foreign investors in domestic government bond markets. The results point to a financial channel in which yield-seeking non-resident investors amplify currency depreciations once a commodity boom unwinds. Our findings imply that commodity price booms are periods in which to prepare for elevated currency risk.
+
+    [Read on SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7364078){.btn
+    .btn-outline-primary .btn-sm}
+
+    '
+  path: research.html
+- title: Global Banks’ Leverage and Global Liquidity
+  date: '2026-07-01'
+  label: Working Papers
+  subtitle: RedNIE Working Paper No. 402, July 2026 · Under review at the Journal of International Money and Finance
   image: images/Research/publications/leverage2026.png
   description: '
 
@@ -29,6 +43,9 @@
     the literature on the global financial cycle and the international transmission
     of financial conditions.
 
+
+    [RedNIE Working Paper No. 402 (PDF)](https://rednie.eco.unc.edu.ar/files/DT/402.pdf){.btn
+    .btn-outline-primary .btn-sm}
 
     [Mark Hayes Prize]{.d-inline-block .border .border-primary .text-primary .rounded
     .px-2 .py-1 style="font-size: 0.8rem;"}

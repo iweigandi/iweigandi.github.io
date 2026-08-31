@@ -1,5 +1,5 @@
 :root {
-  --bg: #f4f1ea;
+  --bg: #fbfaf5;
   --text: #24313a;
   --muted: #5f6d75;
   --blue: #037e73;
@@ -850,7 +850,7 @@ body {
 
 body {
   background-image:
-    url("images/4.png");
+    url("images/paper-texture.png");
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -860,8 +860,10 @@ body {
 .navbar,
 .navbar-collapse.show,
 .navbar-collapse.collapsing {
-  background: rgba(244, 241, 234, 0.0) !important;
-  backdrop-filter: blur(3px);
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 @media (max-width: 700px) {
@@ -880,6 +882,7 @@ body {
   display: flex;
   min-height: 560px;
   flex-direction: column;
+  background: transparent !important;
 }
 
 .chart-card-text {
