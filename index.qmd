@@ -37,7 +37,7 @@ I am an Argentinian economist interested in international and macro-financial an
 
 I am part of the Local Currency for Development group, where I have participated in projects such as ["Enhancing MDB Capacity through Local Currency Lending"](https://business.leeds.ac.uk/dir-record/research-projects/2292/enhancing-mdb-capacity-through-local-currency-lending) and ["Currency Risk-Sharing Scheme for Scaling up Local-Currency Climate Finance in Uganda"](https://business.leeds.ac.uk/dir-record/research-projects/2516/currency-risk-sharing-facility-for-scaling-up-local-currency-climate-finance-in-uganda), through research roles at the University of Leeds and City St George's, University of London.
 
-Previously, I worked as a Credit Analyst at Moody's Local Argentina (2019–2022), covering banks, structured finance transactions, and insurance companies. Before that, I was an analyst in the Research and Statistics Department at Argentina's National Insurance Superintendency (2013–2019). I also have several years of experience as an independent economic consultant. I am also a coordinator in the YSI Financial Stability Working Group.
+Previously, I worked as a Credit Analyst at Moody's Local Argentina (2019–2022), covering banks, structured finance transactions, and insurance companies. Before that, I was an analyst in the Research and Statistics Department at Argentina's National Insurance Superintendency (2013–2019). I have several years of experience as an independent economic consultant. I am also a coordinator in the YSI Financial Stability Working Group.
 :::
 ::: {.lang-es}
 Soy un economista argentino interesado en macrofinanzas internacionales y macroeconomía, riesgo crediticio y políticas públicas. Actualmente soy Investigador en Macroeconomía, Financiamiento y Shocks Globales dentro del Grupo de Desarrollo Económico Internacional en [ODI Global](https://odi.org/en/profile/ivan-weigandi/).
@@ -66,7 +66,7 @@ Licenciatura en Economía - Universidad de Buenos Aires - Argentina - 2018
 
 
 ::: {.lang-en}
-## News
+## New
 :::
 ::: {.lang-es}
 ## Novedades
