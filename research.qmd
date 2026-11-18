@@ -12,7 +12,7 @@ listing:
   - id: publications
     contents: research_files/journals.yml
     sort: "date desc"
-    type: default
+    template: _research-listing.ejs.md
     image-align: left
     categories: false
     # Subtitle is used for your text date ("Q2 2026")
@@ -21,14 +21,14 @@ listing:
   - id: working-papers
     contents: research_files/working_papers.yml
     sort: "date desc"
-    type: default
+    template: _research-listing.ejs.md
     image-align: left
     fields: [image, title, subtitle,  description]
 
   - id: policy-papers
     contents: research_files/policy.yml
     sort: "date desc"
-    type: default
+    template: _research-listing.ejs.md
     image-align: left
     fields: [image, title, subtitle,  description]
 

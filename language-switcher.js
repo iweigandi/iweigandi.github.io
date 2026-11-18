@@ -1,5 +1,6 @@
 (function() {
   const dictionary = {
+    "Read online": "Leer en línea",
     "Research": "Investigación",
     "Teaching": "Docencia",
     "Blog": "Blog",
@@ -54,7 +55,7 @@
     const dict = isEs ? dictionary : reverseDictionary;
 
     const elementsToTranslate = document.querySelectorAll(
-      '.navbar, .nav-tabs, h1, h2, h3, h4, .photo-overlay, .chart-card, .listing-label'
+      '.navbar, .nav-tabs, h1, h2, h3, h4, .photo-overlay, .chart-card, .listing-label, .post-actions a'
     );
 
     elementsToTranslate.forEach(el => {

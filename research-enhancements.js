@@ -8,14 +8,13 @@
     if (!document.body || !document.querySelector('#listing-publications, #listing-policy-papers')) return;
 
     document.querySelectorAll('.quarto-listing-default .quarto-post').forEach((post) => {
-      if (post.dataset.enhanced) return;
+      if (post.dataset.enhanced || !post.getClientRects().length) return;
       post.dataset.enhanced = "true";
 
       const description = post.querySelector('.listing-description');
       if (!description) return;
 
-      const titleLink = post.querySelector('.listing-title a');
-      const buttons = Array.from(description.querySelectorAll('a.btn, .border-primary'));
+      const badges = description.querySelectorAll('span.border-primary');
       let actions = document.createElement('div');
       actions.className = 'post-actions';
       actions.style.marginTop = '0.5rem';
@@ -24,48 +23,19 @@
       actions.style.alignItems = 'center';
       actions.style.flexWrap = 'wrap';
 
-      let hasVisibleBoxes = false;
-
-      buttons.forEach(btn => {
-        const isBtn = btn.tagName === 'A' && btn.classList.contains('btn');
-        const href = btn.getAttribute('href');
-        
-        if (isBtn && href && href !== '#') {
-          // Transfer real links to the title
-          if (titleLink) {
-            titleLink.href = href;
-            titleLink.target = '_blank';
-            titleLink.classList.remove('no-external');
-          }
-        } else if (isBtn) {
-          // Convert fake buttons (like Forthcoming) into simple badges
-          const badge = document.createElement('span');
-          badge.className = 'd-inline-block border border-primary text-primary rounded px-2 py-1';
-          badge.style.fontSize = '0.8rem';
-          badge.textContent = btn.textContent;
-          actions.appendChild(badge);
-          hasVisibleBoxes = true;
-        } else {
-          // Keep existing badges (like Prizes)
-          actions.appendChild(btn);
-          hasVisibleBoxes = true;
-        }
-
-        const parentP = btn.parentElement;
-        if (isBtn) btn.remove();
+      badges.forEach(badge => {
+        const parentP = badge.parentElement;
+        actions.appendChild(badge);
         if (parentP && parentP.tagName === 'P' && parentP.textContent.trim() === '' && !parentP.hasChildNodes()) {
           parentP.remove();
         }
       });
 
-      if (hasVisibleBoxes) {
+      if (badges.length) {
         description.insertAdjacentElement('afterend', actions);
       }
 
-      if (descriptionNeedsToggle(description)) {
-        if (!actions.parentElement) {
-          description.insertAdjacentElement('afterend', actions);
-        }
+      if (!description.querySelector('a.btn') && descriptionNeedsToggle(description)) {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'research-read-more';

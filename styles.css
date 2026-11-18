@@ -734,9 +734,14 @@ h1.title {
   overflow: hidden;
 }
 
-.quarto-listing-default .quarto-post.is-expanded .listing-description {
+.quarto-listing-default .quarto-post.is-expanded .listing-description,
+.quarto-listing-container-custom .listing-description:has(a.btn) {
   display: block;
   -webkit-line-clamp: unset;
+}
+
+.post-actions {
+  margin-block: 0.35rem;
 }
 
 .research-read-more {
