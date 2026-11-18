@@ -2,6 +2,9 @@
 pagetitle: "Data"
 page-layout: full
 jupyter: python3
+format:
+  html:
+    html-math-method: mathml
 execute:
   echo: false
   warning: false
@@ -197,7 +200,7 @@ fig.show(config={"displayModeBar": False, "responsive": True})
 ::: {.chart-card-text}
 Market leverage is decomposed into common-factor and idiosyncratic equity-price components for global systemically important banks.
 
-$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{Common} + \underbrace{u_{b,t}}_{Idiosyncratic}) $$
+$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{\text{Common}} + \underbrace{u_{b,t}}_{\text{Idiosyncratic}}) $$
 
 [Repository](https://github.com/iweigandi/gsib-leverage)
 :::
@@ -208,7 +211,7 @@ $$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{Common} + \underbrace{u_{b,t}}
 ::: {.chart-card-text}
 El apalancamiento de mercado se descompone en factores comunes e idiosincráticos de precios de acciones para los bancos de importancia sistémica global.
 
-$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{Común} + \underbrace{u_{b,t}}_{Idiosincrático}) $$
+$$L_t =  \sum_b s_b(\lambda_b\underbrace{\eta_t}_{\text{Común}} + \underbrace{u_{b,t}}_{\text{Idiosincrático}}) $$
 
 [Repositorio](https://github.com/iweigandi/gsib-leverage)
 :::
